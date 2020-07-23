@@ -5,3 +5,5 @@ es6
 dev
 .idea
 coverage
+*.js
+*.d.ts

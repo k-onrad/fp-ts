@@ -4,11 +4,13 @@
   "description": "Functional programming in TypeScript",
   "files": [
     "lib",
-    "es6"
+    "es6",
+    "*.js",
+    "*.d.ts"
   ],
   "main": "lib/index.js",
-  "module": "es6/index.js",
-  "typings": "lib/index.d.ts",
+  "module": "./index.js",
+  "typings": "./index.d.ts",
   "sideEffects": false,
   "scripts": {
     "lint": "tslint -p .",
@@ -17,10 +19,10 @@
     "prettier": "prettier --list-different \"./{src,test,examples}/**/*.ts\"",
     "fix-prettier": "prettier --write \"./{src,test,examples}/**/*.ts\"",
     "test": "npm run lint && npm run prettier && npm run dtslint && npm run jest-clear-cache && npm run jest && npm run docs",
-    "clean": "rimraf lib/* es6/*",
+    "clean": "rimraf lib/* es6/* src/*.js ./*.d.ts",
     "prebuild": "npm run clean",
-    "build": "tsc -p ./tsconfig.build-es5.json && tsc -p ./tsconfig.build-es6.json",
-    "postbuild": "prettier --write \"./{lib,es6}/**/*.ts\"",
+    "build": "tsc -p ./tsconfig.build-es5.json && tsc -p ./tsconfig.build-es6.json && tsc -p ./tsconfig.build.json",
+    "postbuild": "prettier --write \"./{lib,es6}/**/*.ts\" \"./*.ts\"",
     "prepublish": "npm run build",
     "doctoc": "doctoc README.md docs/introduction/code-conventions.md --title \"**Table of contents**\"",
     "mocha": "mocha -r ts-node/register test/*.ts",

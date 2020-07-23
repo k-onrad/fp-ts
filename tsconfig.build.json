@@ -2,8 +2,9 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "noEmit": false,
-    "outDir": "./es6",
+    "outDir": ".",
     "module": "es6"
   },
-  "include": ["./src"]
+  "include": ["./src"],
+  "exclude": []
 }
