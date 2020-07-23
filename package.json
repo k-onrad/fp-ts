@@ -19,7 +19,7 @@
     "prettier": "prettier --list-different \"./{src,test,examples}/**/*.ts\"",
     "fix-prettier": "prettier --write \"./{src,test,examples}/**/*.ts\"",
     "test": "npm run lint && npm run prettier && npm run dtslint && npm run jest-clear-cache && npm run jest && npm run docs",
-    "clean": "rimraf lib/* es6/* src/*.js ./*.d.ts",
+    "clean": "rimraf lib/* es6/* ./*.js ./*.d.ts",
     "prebuild": "npm run clean",
     "build": "tsc -p ./tsconfig.build-es5.json && tsc -p ./tsconfig.build-es6.json && tsc -p ./tsconfig.build.json",
     "postbuild": "prettier --write \"./{lib,es6}/**/*.ts\" \"./*.ts\"",

@@ -1,9 +1,9 @@
 *.log
 node_modules
-lib
-es6
+# lib
+# es6
 dev
 .idea
 coverage
-*.js
-*.d.ts
+# *.js
+# *.d.ts
