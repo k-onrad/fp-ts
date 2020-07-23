@@ -1,5 +1,5 @@
 {
-  "extends": "./tsconfig.build.json",
+  "extends": "./tsconfig.build-es5.json",
   "compilerOptions": {
     "outDir": "./es6",
     "module": "es6"
