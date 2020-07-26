@@ -1,8 +1,8 @@
-import * as _ from '../../src/TaskEither'
-import * as T from '../../src/Task'
-import * as E from '../../src/Either'
-import * as IOE from '../../src/IOEither'
-import { pipe } from '../../src/pipeable'
+import * as _ from '../../src/TaskEither.ts'
+import * as T from '../../src/Task.ts'
+import * as E from '../../src/Either.ts'
+import * as IOE from '../../src/IOEither.ts'
+import { pipe } from '../../src/pipeable.ts'
 
 //
 // getOrElseW

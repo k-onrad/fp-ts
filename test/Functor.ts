@@ -1,7 +1,7 @@
-import * as assert from 'assert'
-import * as A from '../src/ReadonlyArray'
-import { getFunctorComposition } from '../src/Functor'
-import * as option from '../src/Option'
+import * as assert from 'assert.ts'
+import * as A from '../src/ReadonlyArray.ts'
+import { getFunctorComposition } from '../src/Functor.ts'
+import * as option from '../src/Option.ts'
 
 describe('Functor', () => {
   it('getFunctorComposition', () => {

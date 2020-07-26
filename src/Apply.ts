@@ -11,8 +11,8 @@
  * Formally, `Apply` represents a strong lax semi-monoidal endofunctor.
  *
  * @example
- * import * as O from 'fp-ts/lib/Option'
- * import { pipe } from 'fp-ts/lib/function'
+ * import * as O from 'fp-ts/lib/Option.ts'
+ * import { pipe } from 'fp-ts/lib/function.ts'
  *
  * const f = (a: string) => (b: number) => (c: boolean) => a + String(b) + (c ? 'true' : 'false')
  * const fa: O.Option<string> = O.some('s')
@@ -35,9 +35,9 @@
  *
  * @since 2.0.0
  */
-import { Functor, Functor1, Functor2, Functor2C, Functor3, Functor4, Functor3C } from './Functor'
-import { HKT, Kind, Kind2, Kind3, Kind4, URIS, URIS2, URIS3, URIS4 } from './HKT'
-import { tuple } from './function'
+import { Functor, Functor1, Functor2, Functor2C, Functor3, Functor4, Functor3C } from './Functor.ts'
+import { HKT, Kind, Kind2, Kind3, Kind4, URIS, URIS2, URIS3, URIS4 } from './HKT.ts'
+import { tuple } from './function.ts'
 
 /**
  * @category type classes
@@ -126,8 +126,8 @@ function getTupleConstructor(len: number): (a: unknown) => any {
  * Tuple sequencing, i.e., take a tuple of monadic actions and does them from left-to-right, returning the resulting tuple.
  *
  * @example
- * import { sequenceT } from 'fp-ts/lib/Apply'
- * import { option, some, none } from 'fp-ts/lib/Option'
+ * import { sequenceT } from 'fp-ts/lib/Apply.ts'
+ * import { option, some, none } from 'fp-ts/lib/Option.ts'
  *
  * const sequenceTOption = sequenceT(option)
  * assert.deepStrictEqual(sequenceTOption(some(1)), some([1]))
@@ -230,8 +230,8 @@ function getRecordConstructor(keys: ReadonlyArray<string>) {
  * Like `Apply.sequenceT` but works with structs instead of tuples.
  *
  * @example
- * import { either, right, left } from 'fp-ts/lib/Either'
- * import { sequenceS } from 'fp-ts/lib/Apply'
+ * import { either, right, left } from 'fp-ts/lib/Either.ts'
+ * import { sequenceS } from 'fp-ts/lib/Apply.ts'
  *
  * const ado = sequenceS(either)
  *

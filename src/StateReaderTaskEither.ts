@@ -1,31 +1,31 @@
 /**
  * @since 2.0.0
  */
-import { Alt4 } from './Alt'
-import { Bifunctor4 } from './Bifunctor'
-import { Either } from './Either'
-import { identity, Lazy, pipe, Predicate, Refinement } from './function'
-import { IO } from './IO'
-import { IOEither } from './IOEither'
-import { Monad4 } from './Monad'
-import { MonadTask4 } from './MonadTask'
-import { MonadThrow4 } from './MonadThrow'
-import { Option } from './Option'
-import { Reader } from './Reader'
-import { ReaderEither } from './ReaderEither'
-import * as RTE from './ReaderTaskEither'
-import { State } from './State'
-import { Task } from './Task'
-import { TaskEither } from './TaskEither'
+import { Alt4 } from './Alt.ts'
+import { Bifunctor4 } from './Bifunctor.ts'
+import { Either } from './Either.ts'
+import { identity, Lazy, pipe, Predicate, Refinement } from './function.ts'
+import { IO } from './IO.ts'
+import { IOEither } from './IOEither.ts'
+import { Monad4 } from './Monad.ts'
+import { MonadTask4 } from './MonadTask.ts'
+import { MonadThrow4 } from './MonadThrow.ts'
+import { Option } from './Option.ts'
+import { Reader } from './Reader.ts'
+import { ReaderEither } from './ReaderEither.ts'
+import * as RTE from './ReaderTaskEither.ts'
+import { State } from './State.ts'
+import { Task } from './Task.ts'
+import { TaskEither } from './TaskEither.ts'
 
 // -------------------------------------------------------------------------------------
 // model
 // -------------------------------------------------------------------------------------
 
 import ReaderTaskEither = RTE.ReaderTaskEither
-import { Functor4 } from './Functor'
-import { Applicative4 } from './Applicative'
-import { MonadIO4 } from './MonadIO'
+import { Functor4 } from './Functor.ts'
+import { Applicative4 } from './Applicative.ts'
+import { MonadIO4 } from './MonadIO.ts'
 
 /* tslint:disable:readonly-array */
 /**

@@ -1,7 +1,7 @@
-import * as _ from '../../src/ReaderEither'
-import * as R from '../../src/Reader'
-import * as E from '../../src/Either'
-import { pipe } from '../../src/pipeable'
+import * as _ from '../../src/ReaderEither.ts'
+import * as R from '../../src/Reader.ts'
+import * as E from '../../src/Either.ts'
+import { pipe } from '../../src/pipeable.ts'
 
 //
 // getOrElseW

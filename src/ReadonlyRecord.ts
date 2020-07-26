@@ -1,27 +1,27 @@
 /**
  * @since 2.5.0
  */
-import { Applicative, Applicative1, Applicative2, Applicative2C, Applicative3, Applicative3C } from './Applicative'
-import { Compactable1, Separated } from './Compactable'
-import { Either } from './Either'
-import { Eq, fromEquals } from './Eq'
-import { Filterable1 } from './Filterable'
-import { FilterableWithIndex1, PredicateWithIndex, RefinementWithIndex } from './FilterableWithIndex'
-import { Foldable as FoldableHKT, Foldable1, Foldable2, Foldable3 } from './Foldable'
-import { FoldableWithIndex1 } from './FoldableWithIndex'
-import { identity, Predicate, Refinement } from './function'
-import { Functor1 } from './Functor'
-import { FunctorWithIndex1 } from './FunctorWithIndex'
-import { HKT, Kind, Kind2, Kind3, URIS, URIS2, URIS3 } from './HKT'
-import { Magma } from './Magma'
-import { Monoid } from './Monoid'
-import { isNone, isSome, none, Option, some as optionSome } from './Option'
-import { Semigroup } from './Semigroup'
-import { Show } from './Show'
-import { Traversable1 } from './Traversable'
-import { TraversableWithIndex1 } from './TraversableWithIndex'
-import { Unfoldable, Unfoldable1 } from './Unfoldable'
-import { PipeableWilt1, PipeableWither1, Witherable1 } from './Witherable'
+import { Applicative, Applicative1, Applicative2, Applicative2C, Applicative3, Applicative3C } from './Applicative.ts'
+import { Compactable1, Separated } from './Compactable.ts'
+import { Either } from './Either.ts'
+import { Eq, fromEquals } from './Eq.ts'
+import { Filterable1 } from './Filterable.ts'
+import { FilterableWithIndex1, PredicateWithIndex, RefinementWithIndex } from './FilterableWithIndex.ts'
+import { Foldable as FoldableHKT, Foldable1, Foldable2, Foldable3 } from './Foldable.ts'
+import { FoldableWithIndex1 } from './FoldableWithIndex.ts'
+import { identity, Predicate, Refinement } from './function.ts'
+import { Functor1 } from './Functor.ts'
+import { FunctorWithIndex1 } from './FunctorWithIndex.ts'
+import { HKT, Kind, Kind2, Kind3, URIS, URIS2, URIS3 } from './HKT.ts'
+import { Magma } from './Magma.ts'
+import { Monoid } from './Monoid.ts'
+import { isNone, isSome, none, Option, some as optionSome } from './Option.ts'
+import { Semigroup } from './Semigroup.ts'
+import { Show } from './Show.ts'
+import { Traversable1 } from './Traversable.ts'
+import { TraversableWithIndex1 } from './TraversableWithIndex.ts'
+import { Unfoldable, Unfoldable1 } from './Unfoldable.ts'
+import { PipeableWilt1, PipeableWither1, Witherable1 } from './Witherable.ts'
 
 /**
  * @category model
@@ -87,7 +87,7 @@ export function keys<K extends string>(r: ReadonlyRecord<K, unknown>): ReadonlyA
  * Map a record into an array
  *
  * @example
- * import {collect} from 'fp-ts/lib/ReadonlyRecord'
+ * import {collect} from 'fp-ts/lib/ReadonlyRecord.ts'
  *
  * const x: { a: string, b: boolean } = { a: 'foo', b: false }
  * assert.deepStrictEqual(
@@ -289,8 +289,8 @@ export function getEq<A>(E: Eq<A>): Eq<ReadonlyRecord<string, A>> {
  * Returns a `Monoid` instance for records given a `Semigroup` instance for their values
  *
  * @example
- * import { semigroupSum } from 'fp-ts/lib/Semigroup'
- * import { getMonoid } from 'fp-ts/lib/ReadonlyRecord'
+ * import { semigroupSum } from 'fp-ts/lib/Semigroup.ts'
+ * import { getMonoid } from 'fp-ts/lib/ReadonlyRecord.ts'
  *
  * const M = getMonoid(semigroupSum)
  * assert.deepStrictEqual(M.concat({ foo: 123 }, { foo: 456 }), { foo: 579 })
@@ -638,10 +638,10 @@ export function fromFoldable<F, A>(
  * - combine values for duplicate keys.
  *
  * @example
- * import { getLastSemigroup } from 'fp-ts/lib/Semigroup'
- * import { readonlyArray, zip } from 'fp-ts/lib/ReadonlyArray'
- * import { identity } from 'fp-ts/lib/function'
- * import { ReadonlyRecord, fromFoldableMap } from 'fp-ts/lib/ReadonlyRecord'
+ * import { getLastSemigroup } from 'fp-ts/lib/Semigroup.ts'
+ * import { readonlyArray, zip } from 'fp-ts/lib/ReadonlyArray.ts'
+ * import { identity } from 'fp-ts/lib/function.ts'
+ * import { ReadonlyRecord, fromFoldableMap } from 'fp-ts/lib/ReadonlyRecord.ts'
  *
  * // like lodash `zipObject` or ramda `zipObj`
  * export const zipObject = <K extends string, A>(keys: ReadonlyArray<K>, values: ReadonlyArray<A>): ReadonlyRecord<K, A> =>

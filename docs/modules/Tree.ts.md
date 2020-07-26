@@ -336,12 +336,12 @@ This is also known as the catamorphism on trees.
 export declare function fold<A, B>(f: (a: A, bs: Array<B>) => B): (tree: Tree<A>) => B
 ```
 
-**Example**
+*Example**
 
-```ts
-import { fold, make } from 'fp-ts/lib/Tree'
+``ts
+mport { fold, make } from 'fp-ts/lib/Tree.ts'
 
-const t = make(1, [make(2), make(3)])
+onst t = make(1, [make(2), make(3)])
 
 const sum = (as: Array<number>) => as.reduce((a, acc) => a + acc, 0)
 
@@ -518,12 +518,12 @@ Neat 2-dimensional drawing of a tree
 export declare function drawTree(tree: Tree<string>): string
 ```
 
-**Example**
+*Example**
 
-```ts
-import { make, drawTree, tree } from 'fp-ts/lib/Tree'
+``ts
+mport { make, drawTree, tree } from 'fp-ts/lib/Tree.ts'
 
-const fa = make('a', [tree.of('b'), tree.of('c'), make('d', [tree.of('e'), tree.of('f')])])
+onst fa = make('a', [tree.of('b'), tree.of('c'), make('d', [tree.of('e'), tree.of('f')])])
 
 assert.strictEqual(
   drawTree(fa),

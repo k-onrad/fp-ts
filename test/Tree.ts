@@ -1,11 +1,11 @@
-import * as assert from 'assert'
-import * as Eq from '../src/Eq'
-import { identity, pipe } from '../src/function'
-import * as I from '../src/Identity'
-import * as O from '../src/Option'
-import { monoidString } from '../src/Monoid'
-import { showString } from '../src/Show'
-import * as _ from '../src/Tree'
+import * as assert from 'assert.ts'
+import * as Eq from '../src/Eq.ts'
+import { identity, pipe } from '../src/function.ts'
+import * as I from '../src/Identity.ts'
+import * as O from '../src/Option.ts'
+import { monoidString } from '../src/Monoid.ts'
+import { showString } from '../src/Show.ts'
+import * as _ from '../src/Tree.ts'
 
 describe('Tree', () => {
   describe('pipeables', () => {

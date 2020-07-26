@@ -1,4 +1,4 @@
-import * as _ from '../../src/Eq'
+import * as _ from '../../src/Eq.ts'
 
 //
 // getTupleEq

@@ -1,9 +1,9 @@
-import * as assert from 'assert'
-import * as _ from '../src/IO'
-import { semigroupSum } from '../src/Semigroup'
-import { monoidSum } from '../src/Monoid'
-import * as E from '../src/Either'
-import { pipe } from '../src/function'
+import * as assert from 'assert.ts'
+import * as _ from '../src/IO.ts'
+import { semigroupSum } from '../src/Semigroup.ts'
+import { monoidSum } from '../src/Monoid.ts'
+import * as E from '../src/Either.ts'
+import { pipe } from '../src/function.ts'
 
 describe('IO', () => {
   describe('pipeables', () => {

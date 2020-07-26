@@ -9,11 +9,11 @@
  *
  * @since 2.0.0
  */
-import { Contravariant1 } from './Contravariant'
-import { Eq } from './Eq'
-import { Monoid } from './Monoid'
-import { monoidOrdering, Ordering } from './Ordering'
-import { Semigroup } from './Semigroup'
+import { Contravariant1 } from './Contravariant.ts'
+import { Eq } from './Eq.ts'
+import { Monoid } from './Monoid.ts'
+import { monoidOrdering, Ordering } from './Ordering.ts'
+import { Semigroup } from './Semigroup.ts'
 
 // -------------------------------------------------------------------------------------
 // model
@@ -177,10 +177,10 @@ export function getSemigroup<A = never>(): Semigroup<Ord<A>> {
  * - its `empty` value is an `Ord` that always considers compared elements equal
  *
  * @example
- * import { sort } from 'fp-ts/lib/Array'
- * import { contramap, getDualOrd, getMonoid, ordBoolean, ordNumber, ordString } from 'fp-ts/lib/Ord'
- * import { pipe } from 'fp-ts/lib/function'
- * import { fold } from 'fp-ts/lib/Monoid'
+ * import { sort } from 'fp-ts/lib/Array.ts'
+ * import { contramap, getDualOrd, getMonoid, ordBoolean, ordNumber, ordString } from 'fp-ts/lib/Ord.ts'
+ * import { pipe } from 'fp-ts/lib/function.ts'
+ * import { fold } from 'fp-ts/lib/Monoid.ts'
  *
  * interface User {
  *   id: number
@@ -247,7 +247,7 @@ export function getMonoid<A = never>(): Monoid<Ord<A>> {
  * Given a tuple of `Ord`s returns an `Ord` for the tuple
  *
  * @example
- * import { getTupleOrd, ordString, ordNumber, ordBoolean } from 'fp-ts/lib/Ord'
+ * import { getTupleOrd, ordString, ordNumber, ordBoolean } from 'fp-ts/lib/Ord.ts'
  *
  * const O = getTupleOrd(ordString, ordNumber, ordBoolean)
  * assert.strictEqual(O.compare(['a', 1, true], ['b', 2, true]), -1)

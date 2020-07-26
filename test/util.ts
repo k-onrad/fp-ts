@@ -1,8 +1,8 @@
-import * as assert from 'assert'
-import { Applicative, Applicative1, Applicative2, Applicative2C, Applicative3, Applicative4 } from '../src/Applicative'
-import { sequenceT } from '../src/Apply'
-import { HKT, Kind, Kind2, Kind3, Kind4, URIS, URIS2, URIS3, URIS4 } from '../src/HKT'
-import * as T from '../src/Task'
+import * as assert from 'assert.ts'
+import { Applicative, Applicative1, Applicative2, Applicative2C, Applicative3, Applicative4 } from '../src/Applicative.ts'
+import { sequenceT } from '../src/Apply.ts'
+import { HKT, Kind, Kind2, Kind3, Kind4, URIS, URIS2, URIS3, URIS4 } from '../src/HKT.ts'
+import * as T from '../src/Task.ts'
 
 export interface AssertParSeq {
   <F extends URIS4>(

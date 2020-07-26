@@ -1,9 +1,9 @@
-import * as _ from '../../src/ReaderTaskEither'
-import * as RT from '../../src/ReaderTask'
-import * as E from '../../src/Either'
-import * as TE from '../../src/TaskEither'
-import * as IOE from '../../src/IOEither'
-import { pipe } from '../../src/pipeable'
+import * as _ from '../../src/ReaderTaskEither.ts'
+import * as RT from '../../src/ReaderTask.ts'
+import * as E from '../../src/Either.ts'
+import * as TE from '../../src/TaskEither.ts'
+import * as IOE from '../../src/IOEither.ts'
+import { pipe } from '../../src/pipeable.ts'
 
 //
 // getOrElseW

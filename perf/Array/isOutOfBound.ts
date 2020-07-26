@@ -1,4 +1,4 @@
-import * as Benchmark from 'benchmark'
+import * as Benchmark from 'benchmark.ts'
 
 const suite = new Benchmark.Suite()
 

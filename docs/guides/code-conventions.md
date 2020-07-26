@@ -107,7 +107,7 @@ where `F` is a type constructor.
 Let's say we have the following parser
 
 ```ts
-import * as E from 'fp-ts/lib/Either'
+import * as E from 'fp-ts/lib/Either.ts'
 
 function parse(s: string): E.Either<Error, number> {
   const n = parseFloat(s)
@@ -118,7 +118,7 @@ function parse(s: string): E.Either<Error, number> {
 and a value of type `IOEither<Error, string>`
 
 ```ts
-import * as IE from 'fp-ts/lib/IOEither'
+import * as IE from 'fp-ts/lib/IOEither.ts'
 
 const input: IE.IOEither<Error, string> = IE.right('foo')
 ```
@@ -140,7 +140,7 @@ into a function
 That's what `fromEitherK` is all about
 
 ```ts
-import { pipe } from 'fp-ts/lib/pipeable'
+import { pipe } from 'fp-ts/lib/pipeable.ts'
 
 pipe(input, IE.chain(IE.fromEitherK(parse)))() // left(new Error('cannot decode "foo" to number'))
 
@@ -155,9 +155,9 @@ pipe(input, IE.chainEitherK(parse))() // left(new Error('cannot decode "foo" to 
 **Example**
 
 ```ts
-import * as E from 'fp-ts/lib/Either'
-import * as TE from 'fp-ts/lib/TaskEither'
-import { pipe } from 'fp-ts/lib/pipeable'
+import * as E from 'fp-ts/lib/Either.ts'
+import * as TE from 'fp-ts/lib/TaskEither.ts'
+import { pipe } from 'fp-ts/lib/pipeable.ts'
 
 declare function parseString(s: string): E.Either<string, number>
 declare function fetchUser(id: number): TE.TaskEither<Error, User>

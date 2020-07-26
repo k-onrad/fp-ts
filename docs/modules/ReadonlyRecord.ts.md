@@ -499,8 +499,8 @@ export declare function getMonoid<K extends string, A>(S: Semigroup<A>): Monoid<
 **Example**
 
 ```ts
-import { semigroupSum } from 'fp-ts/lib/Semigroup'
-import { getMonoid } from 'fp-ts/lib/ReadonlyRecord'
+import { semigroupSum } from 'fp-ts/lib/Semigroup.ts'
+import { getMonoid } from 'fp-ts/lib/ReadonlyRecord.ts'
 
 const M = getMonoid(semigroupSum)
 assert.deepStrictEqual(M.concat({ foo: 123 }, { foo: 456 }), { foo: 579 })
@@ -561,7 +561,7 @@ export declare function collect<K extends string, A, B>(
 **Example**
 
 ```ts
-import { collect } from 'fp-ts/lib/ReadonlyRecord'
+import { collect } from 'fp-ts/lib/ReadonlyRecord.ts'
 
 const x: { a: string; b: boolean } = { a: 'foo', b: false }
 assert.deepStrictEqual(collect((key, val) => ({ key: key, value: val }))(x), [
@@ -693,10 +693,10 @@ export declare function fromFoldableMap<F, B>(
 **Example**
 
 ```ts
-import { getLastSemigroup } from 'fp-ts/lib/Semigroup'
-import { readonlyArray, zip } from 'fp-ts/lib/ReadonlyArray'
-import { identity } from 'fp-ts/lib/function'
-import { ReadonlyRecord, fromFoldableMap } from 'fp-ts/lib/ReadonlyRecord'
+import { getLastSemigroup } from 'fp-ts/lib/Semigroup.ts'
+import { readonlyArray, zip } from 'fp-ts/lib/ReadonlyArray.ts'
+import { identity } from 'fp-ts/lib/function.ts'
+import { ReadonlyRecord, fromFoldableMap } from 'fp-ts/lib/ReadonlyRecord.ts'
 
 // like lodash `zipObject` or ramda `zipObj`
 export const zipObject = <K extends string, A>(

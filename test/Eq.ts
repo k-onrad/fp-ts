@@ -1,7 +1,7 @@
-import * as assert from 'assert'
-import * as _ from '../src/Eq'
-import { fold } from '../src/Monoid'
-import { pipe } from '../src/function'
+import * as assert from 'assert.ts'
+import * as _ from '../src/Eq.ts'
+import { fold } from '../src/Monoid.ts'
+import { pipe } from '../src/function.ts'
 
 describe('Eq', () => {
   describe('pipeables', () => {

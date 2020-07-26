@@ -1,7 +1,7 @@
-import * as assert from 'assert'
-import { pipe, tuple } from '../src/function'
-import { monoidString } from '../src/Monoid'
-import * as _ from '../src/Writer'
+import * as assert from 'assert.ts'
+import { pipe, tuple } from '../src/function.ts'
+import { monoidString } from '../src/Monoid.ts'
+import * as _ from '../src/Writer.ts'
 
 describe('Writer', () => {
   describe('pipeables', () => {

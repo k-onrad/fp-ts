@@ -1,7 +1,7 @@
-import * as assert from 'assert'
-import { monoidString } from '../src/Monoid'
-import { ordNumber } from '../src/Ord'
-import * as _ from '../src/Semigroup'
+import * as assert from 'assert.ts'
+import { monoidString } from '../src/Monoid.ts'
+import { ordNumber } from '../src/Ord.ts'
+import * as _ from '../src/Semigroup.ts'
 
 describe('Semigroup', () => {
   it('getTupleSemigroup', () => {

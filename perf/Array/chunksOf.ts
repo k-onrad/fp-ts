@@ -1,5 +1,5 @@
-import * as Benchmark from 'benchmark'
-import { chunksOf } from '../../src/Array'
+import * as Benchmark from 'benchmark.ts'
+import { chunksOf } from '../../src/Array.ts'
 
 const suite = new Benchmark.Suite()
 

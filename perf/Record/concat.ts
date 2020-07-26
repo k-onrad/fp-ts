@@ -1,8 +1,8 @@
-import * as Benchmark from 'benchmark'
-import { getMonoid } from '../../src/Record'
-import { semigroupSum } from '../../src/Semigroup'
+mport * as Benchmark from 'benchmark.ts'
+mport { getMonoid } from '../../src/Record.ts'
+mport { semigroupSum } from '../../src/Semigroup.ts'
 
-const suite = new Benchmark.Suite()
+onst suite = new Benchmark.Suite()
 
 const M = getMonoid(semigroupSum)
 const as = { a: 1, b: 2 }

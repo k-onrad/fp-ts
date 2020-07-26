@@ -10,14 +10,14 @@
  *
  * @since 2.0.0
  */
-import { Applicative1 } from './Applicative'
-import { identity } from './function'
-import { IO } from './IO'
-import { Monad1 } from './Monad'
-import { MonadTask1 } from './MonadTask'
-import { Monoid } from './Monoid'
-import { Semigroup } from './Semigroup'
-import { Functor1 } from './Functor'
+import { Applicative1 } from './Applicative.ts'
+import { identity } from './function.ts'
+import { IO } from './IO.ts'
+import { Monad1 } from './Monad.ts'
+import { MonadTask1 } from './MonadTask.ts'
+import { Monoid } from './Monoid.ts'
+import { Semigroup } from './Semigroup.ts'
+import { Functor1 } from './Functor.ts'
 
 // -------------------------------------------------------------------------------------
 // model
@@ -49,8 +49,8 @@ export const fromIO: <A>(ma: IO<A>) => Task<A> = (ma) => () => Promise.resolve(m
  * Creates a task that will complete after a time delay
  *
  * @example
- * import { sequenceT } from 'fp-ts/lib/Apply'
- * import * as T from 'fp-ts/lib/Task'
+ * import { sequenceT } from 'fp-ts/lib/Apply.ts'
+ * import * as T from 'fp-ts/lib/Task.ts'
  *
  * async function test() {
  *   const log: Array<string> = []
@@ -213,8 +213,8 @@ declare module './HKT' {
  * Lift a semigroup into 'Task', the inner values are concatenated using the provided `Semigroup`.
  *
  * @example
- * import * as T from 'fp-ts/lib/Task'
- * import { semigroupString } from 'fp-ts/lib/Semigroup'
+ * import * as T from 'fp-ts/lib/Task.ts'
+ * import { semigroupString } from 'fp-ts/lib/Semigroup.ts'
  *
  * async function test() {
  *   const S = T.getSemigroup(semigroupString)
@@ -253,7 +253,7 @@ export function getMonoid<A>(M: Monoid<A>): Monoid<Task<A>> {
  * Note: uses `Promise.race` internally.
  *
  * @example
- * import * as T from 'fp-ts/lib/Task'
+ * import * as T from 'fp-ts/lib/Task.ts'
  *
  * async function test() {
  *   const S = T.getRaceMonoid<string>()

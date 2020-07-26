@@ -1,6 +1,6 @@
-import * as Benchmark from 'benchmark'
-import * as A from '../../src/Apply'
-import * as E from '../../src/Either'
+import * as Benchmark from 'benchmark.ts'
+import * as A from '../../src/Apply.ts'
+import * as E from '../../src/Either.ts'
 
 /*
 sequenceS (1) x 13,783,868 ops/sec ±1.90% (82 runs sampled)

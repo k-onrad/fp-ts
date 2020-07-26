@@ -3,24 +3,24 @@
  *
  * @since 2.0.0
  */
-import { Alt1 } from './Alt'
-import { Applicative1 } from './Applicative'
-import { Comonad1 } from './Comonad'
-import { Eq } from './Eq'
-import { Extend1 } from './Extend'
-import { Foldable1 } from './Foldable'
-import { FoldableWithIndex1 } from './FoldableWithIndex'
-import { Lazy, Predicate, Refinement } from './function'
-import { Functor1 } from './Functor'
-import { FunctorWithIndex1 } from './FunctorWithIndex'
-import { Monad1 } from './Monad'
-import { Option } from './Option'
-import { Ord } from './Ord'
-import * as RNEA from './ReadonlyNonEmptyArray'
-import { Semigroup } from './Semigroup'
-import { Show } from './Show'
-import { PipeableTraverse1, Traversable1 } from './Traversable'
-import { PipeableTraverseWithIndex1, TraversableWithIndex1 } from './TraversableWithIndex'
+import { Alt1 } from './Alt.ts'
+import { Applicative1 } from './Applicative.ts'
+import { Comonad1 } from './Comonad.ts'
+import { Eq } from './Eq.ts'
+import { Extend1 } from './Extend.ts'
+import { Foldable1 } from './Foldable.ts'
+import { FoldableWithIndex1 } from './FoldableWithIndex.ts'
+import { Lazy, Predicate, Refinement } from './function.ts'
+import { Functor1 } from './Functor.ts'
+import { FunctorWithIndex1 } from './FunctorWithIndex.ts'
+import { Monad1 } from './Monad.ts'
+import { Option } from './Option.ts'
+import { Ord } from './Ord.ts'
+import * as RNEA from './ReadonlyNonEmptyArray.ts'
+import { Semigroup } from './Semigroup.ts'
+import { Show } from './Show.ts'
+import { PipeableTraverse1, Traversable1 } from './Traversable.ts'
+import { PipeableTraverseWithIndex1, TraversableWithIndex1 } from './TraversableWithIndex.ts'
 
 /* tslint:disable:readonly-array */
 
@@ -43,7 +43,7 @@ export interface NonEmptyArray<A> extends Array<A> {
  * Append an element to the front of an array, creating a new non empty array
  *
  * @example
- * import { cons } from 'fp-ts/lib/NonEmptyArray'
+ * import { cons } from 'fp-ts/lib/NonEmptyArray.ts'
  *
  * assert.deepStrictEqual(cons(1, [2, 3, 4]), [1, 2, 3, 4])
  *
@@ -57,7 +57,7 @@ export const cons: <A>(head: A, tail: Array<A>) => NonEmptyArray<A> = RNEA.cons 
  * Append an element to the end of an array, creating a new non empty array
  *
  * @example
- * import { snoc } from 'fp-ts/lib/NonEmptyArray'
+ * import { snoc } from 'fp-ts/lib/NonEmptyArray.ts'
  *
  * assert.deepStrictEqual(snoc([1, 2, 3], 4), [1, 2, 3, 4])
  *
@@ -117,8 +117,8 @@ export const getSemigroup: <A = never>() => Semigroup<NonEmptyArray<A>> = RNEA.g
 
 /**
  * @example
- * import { getEq, cons } from 'fp-ts/lib/NonEmptyArray'
- * import { eqNumber } from 'fp-ts/lib/Eq'
+ * import { getEq, cons } from 'fp-ts/lib/NonEmptyArray.ts'
+ * import { eqNumber } from 'fp-ts/lib/Eq.ts'
  *
  * const E = getEq(eqNumber)
  * assert.strictEqual(E.equals(cons(1, [2]), [1, 2]), true)
@@ -133,8 +133,8 @@ export const getEq: <A>(E: Eq<A>) => Eq<NonEmptyArray<A>> = RNEA.getEq
  * Group equal, consecutive elements of an array into non empty arrays.
  *
  * @example
- * import { cons, group } from 'fp-ts/lib/NonEmptyArray'
- * import { ordNumber } from 'fp-ts/lib/Ord'
+ * import { cons, group } from 'fp-ts/lib/NonEmptyArray.ts'
+ * import { ordNumber } from 'fp-ts/lib/Ord.ts'
  *
  * assert.deepStrictEqual(group(ordNumber)([1, 2, 1, 1]), [
  *   cons(1, []),
@@ -159,8 +159,8 @@ export function group<A>(E: Eq<A>): (as: Array<A>) => Array<NonEmptyArray<A>> {
  * Sort and then group the elements of an array into non empty arrays.
  *
  * @example
- * import { cons, groupSort } from 'fp-ts/lib/NonEmptyArray'
- * import { ordNumber } from 'fp-ts/lib/Ord'
+ * import { cons, groupSort } from 'fp-ts/lib/NonEmptyArray.ts'
+ * import { ordNumber } from 'fp-ts/lib/Ord.ts'
  *
  * assert.deepStrictEqual(groupSort(ordNumber)([1, 2, 1, 1]), [cons(1, [1, 1]), cons(2, [])])
  *
@@ -174,7 +174,7 @@ export const groupSort: <A>(O: Ord<A>) => (as: Array<A>) => Array<NonEmptyArray<
  * function on each element, and grouping the results according to values returned
  *
  * @example
- * import { cons, groupBy } from 'fp-ts/lib/NonEmptyArray'
+ * import { cons, groupBy } from 'fp-ts/lib/NonEmptyArray.ts'
  *
  * assert.deepStrictEqual(groupBy((s: string) => String(s.length))(['foo', 'bar', 'foobar']), {
  *   '3': cons('foo', ['bar']),
@@ -197,7 +197,7 @@ export const last: <A>(nea: NonEmptyArray<A>) => A = RNEA.last
  * Get all but the last element of a non empty array, creating a new array.
  *
  * @example
- * import { init } from 'fp-ts/lib/NonEmptyArray'
+ * import { init } from 'fp-ts/lib/NonEmptyArray.ts'
  *
  * assert.deepStrictEqual(init([1, 2, 3]), [1, 2])
  * assert.deepStrictEqual(init([1]), [])

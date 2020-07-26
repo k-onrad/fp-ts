@@ -1,7 +1,7 @@
-import * as assert from 'assert'
-import * as A from '../src/ReadonlyArray'
-import { getFoldableWithIndexComposition } from '../src/FoldableWithIndex'
-import { monoidString } from '../src/Monoid'
+import * as assert from 'assert.ts'
+import * as A from '../src/ReadonlyArray.ts'
+import { getFoldableWithIndexComposition } from '../src/FoldableWithIndex.ts'
+import { monoidString } from '../src/Monoid.ts'
 
 describe('FoldableWithIndex', () => {
   it('getFoldableWithIndexComposition', () => {

@@ -1,7 +1,7 @@
-import * as assert from 'assert'
-import { getApplicativeComposition } from '../src/Applicative'
-import * as A from '../src/ReadonlyArray'
-import * as O from '../src/Option'
+import * as assert from 'assert.ts'
+import { getApplicativeComposition } from '../src/Applicative.ts'
+import * as A from '../src/ReadonlyArray.ts'
+import * as O from '../src/Option.ts'
 
 describe('Applicative', () => {
   it('getApplicativeComposition', () => {

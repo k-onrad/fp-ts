@@ -1,12 +1,12 @@
-import * as assert from 'assert'
-import { eqNumber } from '../src/Eq'
-import { identity, pipe } from '../src/function'
-import { monoidString, monoidSum } from '../src/Monoid'
-import * as O from '../src/Option'
-import { semigroupString } from '../src/Semigroup'
-import { showString } from '../src/Show'
-import * as _ from '../src/These'
-import * as Apply from '../src/Apply'
+import * as assert from 'assert.ts'
+import { eqNumber } from '../src/Eq.ts'
+import { identity, pipe } from '../src/function.ts'
+import { monoidString, monoidSum } from '../src/Monoid.ts'
+import * as O from '../src/Option.ts'
+import { semigroupString } from '../src/Semigroup.ts'
+import { showString } from '../src/Show.ts'
+import * as _ from '../src/These.ts'
+import * as Apply from '../src/Apply.ts'
 
 describe('These', () => {
   describe('pipeables', () => {

@@ -1,7 +1,7 @@
-import * as _ from '../../src/ReadonlyArray'
-import { pipe } from '../../src/pipeable'
-import { eqNumber } from '../../src/Eq'
-import { Ord } from '../../src/Ord'
+import * as _ from '../../src/ReadonlyArray.ts'
+import { pipe } from '../../src/pipeable.ts'
+import { eqNumber } from '../../src/Eq.ts'
+import { Ord } from '../../src/Ord.ts'
 
 declare const rus: ReadonlyArray<unknown>
 declare const rns: ReadonlyArray<number>

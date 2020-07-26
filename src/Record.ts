@@ -1,28 +1,28 @@
 /**
  * @since 2.0.0
  */
-import { Applicative, Applicative1, Applicative2, Applicative2C, Applicative3, Applicative3C } from './Applicative'
-import { Compactable1, Separated } from './Compactable'
-import { Either } from './Either'
-import { Eq } from './Eq'
-import { Filterable1 } from './Filterable'
-import { FilterableWithIndex1, PredicateWithIndex, RefinementWithIndex } from './FilterableWithIndex'
-import { Foldable as FoldableHKT, Foldable1, Foldable2, Foldable3 } from './Foldable'
-import { FoldableWithIndex1 } from './FoldableWithIndex'
-import { Predicate, Refinement } from './function'
-import { Functor1 } from './Functor'
-import { FunctorWithIndex1 } from './FunctorWithIndex'
-import { HKT, Kind, Kind2, Kind3, URIS, URIS2, URIS3 } from './HKT'
-import { Magma } from './Magma'
-import { Monoid } from './Monoid'
-import { Option } from './Option'
-import * as RR from './ReadonlyRecord'
-import { Semigroup } from './Semigroup'
-import { Show } from './Show'
-import { Traversable1 } from './Traversable'
-import { TraversableWithIndex1 } from './TraversableWithIndex'
-import { Unfoldable, Unfoldable1 } from './Unfoldable'
-import { PipeableWilt1, PipeableWither1, Witherable1 } from './Witherable'
+import { Applicative, Applicative1, Applicative2, Applicative2C, Applicative3, Applicative3C } from './Applicative.ts'
+import { Compactable1, Separated } from './Compactable.ts'
+import { Either } from './Either.ts'
+import { Eq } from './Eq.ts'
+import { Filterable1 } from './Filterable.ts'
+import { FilterableWithIndex1, PredicateWithIndex, RefinementWithIndex } from './FilterableWithIndex.ts'
+import { Foldable as FoldableHKT, Foldable1, Foldable2, Foldable3 } from './Foldable.ts'
+import { FoldableWithIndex1 } from './FoldableWithIndex.ts'
+import { Predicate, Refinement } from './function.ts'
+import { Functor1 } from './Functor.ts'
+import { FunctorWithIndex1 } from './FunctorWithIndex.ts'
+import { HKT, Kind, Kind2, Kind3, URIS, URIS2, URIS3 } from './HKT.ts'
+import { Magma } from './Magma.ts'
+import { Monoid } from './Monoid.ts'
+import { Option } from './Option.ts'
+import * as RR from './ReadonlyRecord.ts'
+import { Semigroup } from './Semigroup.ts'
+import { Show } from './Show.ts'
+import { Traversable1 } from './Traversable.ts'
+import { TraversableWithIndex1 } from './TraversableWithIndex.ts'
+import { Unfoldable, Unfoldable1 } from './Unfoldable.ts'
+import { PipeableWilt1, PipeableWither1, Witherable1 } from './Witherable.ts'
 
 /* tslint:disable:readonly-array */
 
@@ -58,7 +58,7 @@ export const keys: <K extends string>(r: Record<K, unknown>) => Array<K> = RR.ke
  * Map a record into an array
  *
  * @example
- * import {collect} from 'fp-ts/lib/Record'
+ * import {collect} from 'fp-ts/lib/Record.ts'
  *
  * const x: { a: string, b: boolean } = { a: 'foo', b: false }
  * assert.deepStrictEqual(
@@ -165,8 +165,8 @@ export function getEq<A>(E: Eq<A>): Eq<Record<string, A>> {
  * Returns a `Monoid` instance for records given a `Semigroup` instance for their values
  *
  * @example
- * import { semigroupSum } from 'fp-ts/lib/Semigroup'
- * import { getMonoid } from 'fp-ts/lib/Record'
+ * import { semigroupSum } from 'fp-ts/lib/Semigroup.ts'
+ * import { getMonoid } from 'fp-ts/lib/Record.ts'
  *
  * const M = getMonoid(semigroupSum)
  * assert.deepStrictEqual(M.concat({ foo: 123 }, { foo: 456 }), { foo: 579 })
@@ -427,10 +427,10 @@ export function fromFoldable<F, A>(M: Magma<A>, F: FoldableHKT<F>): (fka: HKT<F,
  * - combine values for duplicate keys.
  *
  * @example
- * import { getLastSemigroup } from 'fp-ts/lib/Semigroup'
- * import { array, zip } from 'fp-ts/lib/Array'
- * import { identity } from 'fp-ts/lib/function'
- * import { fromFoldableMap } from 'fp-ts/lib/Record'
+ * import { getLastSemigroup } from 'fp-ts/lib/Semigroup.ts'
+ * import { array, zip } from 'fp-ts/lib/Array.ts'
+ * import { identity } from 'fp-ts/lib/function.ts'
+ * import { fromFoldableMap } from 'fp-ts/lib/Record.ts'
  *
  * // like lodash `zipObject` or ramda `zipObj`
  * export const zipObject = <K extends string, A>(keys: Array<K>, values: Array<A>): Record<K, A> =>

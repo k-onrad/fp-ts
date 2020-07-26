@@ -1,5 +1,5 @@
-import * as _ from '../../src/ReadonlySet'
-import { eqNumber } from '../../src/Eq'
+import * as _ from '../../src/ReadonlySet.ts'
+import { eqNumber } from '../../src/Eq.ts'
 
 declare const me: ReadonlySet<number>
 

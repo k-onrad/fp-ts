@@ -1,6 +1,6 @@
-import * as Benchmark from 'benchmark'
-import { map, filter } from '../../src/Array'
-import { pipe } from '../../src/pipeable'
+import * as Benchmark from 'benchmark.ts'
+import { map, filter } from '../../src/Array.ts'
+import { pipe } from '../../src/pipeable.ts'
 
 const suite = new Benchmark.Suite()
 

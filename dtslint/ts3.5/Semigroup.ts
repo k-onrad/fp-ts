@@ -1,4 +1,4 @@
-import * as _ from '../../src/Semigroup'
+import * as _ from '../../src/Semigroup.ts'
 
 //
 // getTupleSemigroup

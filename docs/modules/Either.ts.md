@@ -407,7 +407,7 @@ export declare function fromNullable<E>(e: E): <A>(a: A) => Either<E, NonNullabl
 **Example**
 
 ```ts
-import { fromNullable, left, right } from 'fp-ts/lib/Either'
+import { fromNullable, left, right } from 'fp-ts/lib/Either.ts'
 
 const parse = fromNullable('nully')
 
@@ -466,7 +466,7 @@ export declare function parseJSON<E>(s: string, onError: (reason: unknown) => E)
 **Example**
 
 ```ts
-import { parseJSON, toError, right, left } from 'fp-ts/lib/Either'
+import { parseJSON, toError, right, left } from 'fp-ts/lib/Either.ts'
 
 assert.deepStrictEqual(parseJSON('{"a":1}', toError), right({ a: 1 }))
 assert.deepStrictEqual(parseJSON('{"a":}', toError), left(new SyntaxError('Unexpected token } in JSON at position 5')))
@@ -500,8 +500,8 @@ export declare function stringifyJSON<E>(u: unknown, onError: (reason: unknown) 
 **Example**
 
 ```ts
-import * as E from 'fp-ts/lib/Either'
-import { pipe } from 'fp-ts/lib/function'
+import * as E from 'fp-ts/lib/Either.ts'
+import { pipe } from 'fp-ts/lib/function.ts'
 
 assert.deepStrictEqual(E.stringifyJSON({ a: 1 }, E.toError), E.right('{"a":1}'))
 const circular: any = { ref: null }
@@ -530,7 +530,7 @@ export declare function tryCatch<E, A>(f: Lazy<A>, onError: (e: unknown) => E): 
 **Example**
 
 ```ts
-import { Either, left, right, tryCatch } from 'fp-ts/lib/Either'
+import { Either, left, right, tryCatch } from 'fp-ts/lib/Either.ts'
 
 const unsafeHead = <A>(as: Array<A>): A => {
   if (as.length > 0) {
@@ -569,8 +569,8 @@ export declare function fold<E, A, B>(onLeft: (e: E) => B, onRight: (a: A) => B)
 **Example**
 
 ```ts
-import { fold, left, right } from 'fp-ts/lib/Either'
-import { pipe } from 'fp-ts/lib/function'
+import { fold, left, right } from 'fp-ts/lib/Either.ts'
+import { pipe } from 'fp-ts/lib/function.ts'
 
 function onLeft(errors: Array<string>): string {
   return `Errors: ${errors.join(', ')}`
@@ -817,8 +817,8 @@ export declare function getApplySemigroup<E, A>(S: Semigroup<A>): Semigroup<Eith
 **Example**
 
 ```ts
-import { getApplySemigroup, left, right } from 'fp-ts/lib/Either'
-import { semigroupSum } from 'fp-ts/lib/Semigroup'
+import { getApplySemigroup, left, right } from 'fp-ts/lib/Either.ts'
+import { semigroupSum } from 'fp-ts/lib/Semigroup.ts'
 
 const S = getApplySemigroup<string, number>(semigroupSum)
 assert.deepStrictEqual(S.concat(left('a'), left('b')), left('a'))
@@ -853,8 +853,8 @@ export declare function getSemigroup<E, A>(S: Semigroup<A>): Semigroup<Either<E,
 **Example**
 
 ```ts
-import { getSemigroup, left, right } from 'fp-ts/lib/Either'
-import { semigroupSum } from 'fp-ts/lib/Semigroup'
+import { getSemigroup, left, right } from 'fp-ts/lib/Either.ts'
+import { semigroupSum } from 'fp-ts/lib/Semigroup.ts'
 
 const S = getSemigroup<string, number>(semigroupSum)
 assert.deepStrictEqual(S.concat(left('a'), left('b')), left('a'))
@@ -1023,7 +1023,7 @@ export declare function exists<A>(predicate: Predicate<A>): <E>(ma: Either<E, A>
 **Example**
 
 ```ts
-import { exists, left, right } from 'fp-ts/lib/Either'
+import { exists, left, right } from 'fp-ts/lib/Either.ts'
 
 const gt2 = exists((n: number) => n > 2)
 

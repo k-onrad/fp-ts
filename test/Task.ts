@@ -1,9 +1,9 @@
-import * as assert from 'assert'
-import * as I from '../src/IO'
-import { monoidString } from '../src/Monoid'
-import { pipe } from '../src/function'
-import * as _ from '../src/Task'
-import { assertSeq, assertPar } from './util'
+import * as assert from 'assert.ts'
+import * as I from '../src/IO.ts'
+import { monoidString } from '../src/Monoid.ts'
+import { pipe } from '../src/function.ts'
+import * as _ from '../src/Task.ts'
+import { assertSeq, assertPar } from './util.ts'
 
 const delayReject = <A>(n: number, a: A): _.Task<A> => () =>
   new Promise<A>((_, reject) => {

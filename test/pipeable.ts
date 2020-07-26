@@ -1,11 +1,11 @@
-import * as assert from 'assert'
-import * as A from '../src/ReadonlyArray'
-import * as C from '../src/Const'
-import * as E from '../src/Either'
-import { fold, monoidSum } from '../src/Monoid'
-import * as O from '../src/Option'
-import { pipeable, pipe } from '../src/pipeable'
-import * as R from '../src/Reader'
+import * as assert from 'assert.ts'
+import * as A from '../src/ReadonlyArray.ts'
+import * as C from '../src/Const.ts'
+import * as E from '../src/Either.ts'
+import { fold, monoidSum } from '../src/Monoid.ts'
+import * as O from '../src/Option.ts'
+import { pipeable, pipe } from '../src/pipeable.ts'
+import * as R from '../src/Reader.ts'
 
 describe('pipeable', () => {
   it('{}', () => {

@@ -1,5 +1,5 @@
-import * as _ from '../../src/Map'
-import { eqString, eqNumber } from '../../src/Eq'
+import * as _ from '../../src/Map.ts'
+import { eqString, eqNumber } from '../../src/Eq.ts'
 
 //
 // FilterableWithIndex overloadings

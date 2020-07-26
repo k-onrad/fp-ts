@@ -1,5 +1,5 @@
-import * as assert from 'assert'
-import * as B from '../src/boolean'
+import * as assert from 'assert.ts'
+import * as B from '../src/boolean.ts'
 
 describe('boolean', () => {
   it('fold', () => {

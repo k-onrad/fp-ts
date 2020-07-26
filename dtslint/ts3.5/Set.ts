@@ -1,5 +1,5 @@
-import * as _ from '../../src/Set'
-import { eqNumber } from '../../src/Eq'
+import * as _ from '../../src/Set.ts'
+import { eqNumber } from '../../src/Eq.ts'
 
 declare const me: Set<number>
 

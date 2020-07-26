@@ -19,12 +19,12 @@ The `traverse` and `sequence` functions should be compatible in the following se
 
 where `A` is an `Applicative` instance
 
-`Traversable` instances should also be compatible with the corresponding `Foldable` instances, in the following sense:
+Traversable` instances should also be compatible with the corresponding `Foldable` instances, in the following sense:
 
-```ts
-import { getApplicative, make } from 'fp-ts/lib/Const'
+``ts
+mport { getApplicative, make } from 'fp-ts/lib/Const.ts'
 
-const A = getApplicative(M)
+onst A = getApplicative(M)
 
 foldMap(M)(xs, f) = traverse(A)(xs, (a) => make(f(a)))
 ```
@@ -515,16 +515,16 @@ export declare function getTraversableComposition<F, G>(
 ): TraversableComposition<F, G>
 ```
 
-**Example**
+*Example**
 
-```ts
-import { array } from 'fp-ts/lib/Array'
-import { io } from 'fp-ts/lib/IO'
-import { none, option, some } from 'fp-ts/lib/Option'
-import { getTraversableComposition } from 'fp-ts/lib/Traversable'
+``ts
+mport { array } from 'fp-ts/lib/Array.ts'
+mport { io } from 'fp-ts/lib/IO.ts'
+mport { none, option, some } from 'fp-ts/lib/Option.ts'
+mport { getTraversableComposition } from 'fp-ts/lib/Traversable.ts'
 
-const T = getTraversableComposition(array, option)
-const state: Record<string, number | undefined> = {
+onst T = getTraversableComposition(array, option)
+onst state: Record<string, number | undefined> = {
   a: 1,
   b: 2,
 }

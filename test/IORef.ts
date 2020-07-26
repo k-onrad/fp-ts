@@ -1,7 +1,7 @@
-import * as assert from 'assert'
-import * as I from '../src/IO'
-import { IORef, newIORef } from '../src/IORef'
-import { pipe } from '../src/function'
+import * as assert from 'assert.ts'
+import * as I from '../src/IO.ts'
+import { IORef, newIORef } from '../src/IORef.ts'
+import { pipe } from '../src/function.ts'
 
 describe('IORef', () => {
   it('read', () => {

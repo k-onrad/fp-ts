@@ -13,25 +13,25 @@
  *
  * @since 2.0.0
  */
-import { Alt2, Alt2C } from './Alt'
-import { Applicative as ApplicativeHKT, Applicative2, Applicative2C } from './Applicative'
-import { Bifunctor2 } from './Bifunctor'
-import { ChainRec2, ChainRec2C, tailRec } from './ChainRec'
-import { Separated } from './Compactable'
-import { Eq } from './Eq'
-import { Extend2 } from './Extend'
-import { Foldable2 } from './Foldable'
-import { identity, Lazy, Predicate, Refinement } from './function'
-import { Functor2 } from './Functor'
-import { HKT } from './HKT'
-import { Monad2, Monad2C } from './Monad'
-import { MonadThrow2, MonadThrow2C } from './MonadThrow'
-import { Monoid } from './Monoid'
-import { Option } from './Option'
-import { Semigroup } from './Semigroup'
-import { Show } from './Show'
-import { PipeableTraverse2, Traversable2 } from './Traversable'
-import { Witherable2C } from './Witherable'
+import { Alt2, Alt2C } from './Alt.ts'
+import { Applicative as ApplicativeHKT, Applicative2, Applicative2C } from './Applicative.ts'
+import { Bifunctor2 } from './Bifunctor.ts'
+import { ChainRec2, ChainRec2C, tailRec } from './ChainRec.ts'
+import { Separated } from './Compactable.ts'
+import { Eq } from './Eq.ts'
+import { Extend2 } from './Extend.ts'
+import { Foldable2 } from './Foldable.ts'
+import { identity, Lazy, Predicate, Refinement } from './function.ts'
+import { Functor2 } from './Functor.ts'
+import { HKT } from './HKT.ts'
+import { Monad2, Monad2C } from './Monad.ts'
+import { MonadThrow2, MonadThrow2C } from './MonadThrow.ts'
+import { Monoid } from './Monoid.ts'
+import { Option } from './Option.ts'
+import { Semigroup } from './Semigroup.ts'
+import { Show } from './Show.ts'
+import { PipeableTraverse2, Traversable2 } from './Traversable.ts'
+import { Witherable2C } from './Witherable.ts'
 
 // -------------------------------------------------------------------------------------
 // model
@@ -109,7 +109,7 @@ export const right = <E = never, A = never>(a: A): Either<E, A> => ({ _tag: 'Rig
  * the provided default as a `Left`
  *
  * @example
- * import { fromNullable, left, right } from 'fp-ts/lib/Either'
+ * import { fromNullable, left, right } from 'fp-ts/lib/Either.ts'
  *
  * const parse = fromNullable('nully')
  *
@@ -128,7 +128,7 @@ export function fromNullable<E>(e: E): <A>(a: A) => Either<E, NonNullable<A>> {
  * Constructs a new `Either` from a function that might throw
  *
  * @example
- * import { Either, left, right, tryCatch } from 'fp-ts/lib/Either'
+ * import { Either, left, right, tryCatch } from 'fp-ts/lib/Either.ts'
  *
  * const unsafeHead = <A>(as: Array<A>): A => {
  *   if (as.length > 0) {
@@ -180,7 +180,7 @@ export interface JsonArray extends ReadonlyArray<Json> {}
  * Converts a JavaScript Object Notation (JSON) string into an object.
  *
  * @example
- * import { parseJSON, toError, right, left } from 'fp-ts/lib/Either'
+ * import { parseJSON, toError, right, left } from 'fp-ts/lib/Either.ts'
  *
  * assert.deepStrictEqual(parseJSON('{"a":1}', toError), right({ a: 1 }))
  * assert.deepStrictEqual(parseJSON('{"a":}', toError), left(new SyntaxError('Unexpected token } in JSON at position 5')))
@@ -197,8 +197,8 @@ export function parseJSON<E>(s: string, onError: (reason: unknown) => E): Either
  * Converts a JavaScript value to a JavaScript Object Notation (JSON) string.
  *
  * @example
- * import * as E from 'fp-ts/lib/Either'
- * import { pipe } from 'fp-ts/lib/function'
+ * import * as E from 'fp-ts/lib/Either.ts'
+ * import { pipe } from 'fp-ts/lib/function.ts'
  *
  * assert.deepStrictEqual(E.stringifyJSON({ a: 1 }, E.toError), E.right('{"a":1}'))
  * const circular: any = { ref: null }
@@ -243,8 +243,8 @@ export const fromPredicate: {
  * if the value is a `Right` the inner value is applied to the second function.
  *
  * @example
- * import { fold, left, right } from 'fp-ts/lib/Either'
- * import { pipe } from 'fp-ts/lib/function'
+ * import { fold, left, right } from 'fp-ts/lib/Either.ts'
+ * import { pipe } from 'fp-ts/lib/function.ts'
  *
  * function onLeft(errors: Array<string>): string {
  *   return `Errors: ${errors.join(', ')}`
@@ -570,8 +570,8 @@ export function getEq<E, A>(EL: Eq<E>, EA: Eq<A>): Eq<Either<E, A>> {
  * concatenated using the provided `Semigroup`
  *
  * @example
- * import { getSemigroup, left, right } from 'fp-ts/lib/Either'
- * import { semigroupSum } from 'fp-ts/lib/Semigroup'
+ * import { getSemigroup, left, right } from 'fp-ts/lib/Either.ts'
+ * import { semigroupSum } from 'fp-ts/lib/Semigroup.ts'
  *
  * const S = getSemigroup<string, number>(semigroupSum)
  * assert.deepStrictEqual(S.concat(left('a'), left('b')), left('a'))
@@ -593,8 +593,8 @@ export function getSemigroup<E, A>(S: Semigroup<A>): Semigroup<Either<E, A>> {
  * are concatenated using the provided `Semigroup`
  *
  * @example
- * import { getApplySemigroup, left, right } from 'fp-ts/lib/Either'
- * import { semigroupSum } from 'fp-ts/lib/Semigroup'
+ * import { getApplySemigroup, left, right } from 'fp-ts/lib/Either.ts'
+ * import { semigroupSum } from 'fp-ts/lib/Semigroup.ts'
  *
  * const S = getApplySemigroup<string, number>(semigroupSum)
  * assert.deepStrictEqual(S.concat(left('a'), left('b')), left('a'))
@@ -977,7 +977,7 @@ export function elem<A>(E: Eq<A>): <E>(a: A, ma: Either<E, A>) => boolean {
  * Returns `false` if `Left` or returns the result of the application of the given predicate to the `Right` value.
  *
  * @example
- * import { exists, left, right } from 'fp-ts/lib/Either'
+ * import { exists, left, right } from 'fp-ts/lib/Either.ts'
  *
  * const gt2 = exists((n: number) => n > 2)
  *

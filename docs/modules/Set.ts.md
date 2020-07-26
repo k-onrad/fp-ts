@@ -81,15 +81,15 @@ export declare const difference: <A>(
 ) => { (that: Set<A>): (me: Set<A>) => Set<A>; (me: Set<A>, that: Set<A>): Set<A> }
 ```
 
-**Example**
+*Example**
 
-```ts
-import { difference } from 'fp-ts/lib/Set'
-import { eqNumber } from 'fp-ts/lib/Eq'
-import { pipe } from 'fp-ts/lib/function'
+``ts
+mport { difference } from 'fp-ts/lib/Set.ts'
+mport { eqNumber } from 'fp-ts/lib/Eq.ts'
+mport { pipe } from 'fp-ts/lib/function.ts'
 
-assert.deepStrictEqual(pipe(new Set([1, 2]), difference(eqNumber)(new Set([1, 3]))), new Set([2]))
-```
+ssert.deepStrictEqual(pipe(new Set([1, 2]), difference(eqNumber)(new Set([1, 3]))), new Set([2]))
+``
 
 Added in v2.0.0
 

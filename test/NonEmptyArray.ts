@@ -1,12 +1,12 @@
-import * as assert from 'assert'
-import { eqNumber } from '../src/Eq'
-import { identity, pipe } from '../src/function'
-import * as M from '../src/Monoid'
-import * as _ from '../src/NonEmptyArray'
-import * as O from '../src/Option'
-import { ordNumber } from '../src/Ord'
-import { semigroupString, semigroupSum } from '../src/Semigroup'
-import { showString } from '../src/Show'
+import * as assert from 'assert.ts'
+import { eqNumber } from '../src/Eq.ts'
+import { identity, pipe } from '../src/function.ts'
+import * as M from '../src/Monoid.ts'
+import * as _ from '../src/NonEmptyArray.ts'
+import * as O from '../src/Option.ts'
+import { ordNumber } from '../src/Ord.ts'
+import { semigroupString, semigroupSum } from '../src/Semigroup.ts'
+import { showString } from '../src/Show.ts'
 
 describe('NonEmptyArray', () => {
   describe('pipeables', () => {

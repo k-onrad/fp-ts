@@ -55,7 +55,7 @@ export declare function getDualSemigroup<A>(S: Semigroup<A>): Semigroup<A>
 **Example**
 
 ```ts
-import { getDualSemigroup, semigroupString } from 'fp-ts/lib/Semigroup'
+import { getDualSemigroup, semigroupString } from 'fp-ts/lib/Semigroup.ts'
 
 assert.deepStrictEqual(getDualSemigroup(semigroupString).concat('a', 'b'), 'ba')
 ```
@@ -95,7 +95,7 @@ export declare function getIntercalateSemigroup<A>(a: A): (S: Semigroup<A>) => S
 **Example**
 
 ```ts
-import { getIntercalateSemigroup, semigroupString } from 'fp-ts/lib/Semigroup'
+import { getIntercalateSemigroup, semigroupString } from 'fp-ts/lib/Semigroup.ts'
 
 const S = getIntercalateSemigroup(' ')(semigroupString)
 
@@ -148,7 +148,7 @@ export declare function getObjectSemigroup<A extends object = never>(): Semigrou
 **Example**
 
 ```ts
-import { getObjectSemigroup } from 'fp-ts/lib/Semigroup'
+import { getObjectSemigroup } from 'fp-ts/lib/Semigroup.ts'
 
 interface Person {
   name: string
@@ -188,7 +188,7 @@ export declare function getTupleSemigroup<T extends ReadonlyArray<Semigroup<any>
 **Example**
 
 ```ts
-import { getTupleSemigroup, semigroupString, semigroupSum, semigroupAll } from 'fp-ts/lib/Semigroup'
+import { getTupleSemigroup, semigroupString, semigroupSum, semigroupAll } from 'fp-ts/lib/Semigroup.ts'
 
 const S1 = getTupleSemigroup(semigroupString, semigroupSum)
 assert.deepStrictEqual(S1.concat(['a', 1], ['b', 2]), ['ab', 3])
@@ -297,7 +297,7 @@ export declare function fold<A>(
 **Example**
 
 ```ts
-import * as S from 'fp-ts/lib/Semigroup'
+import * as S from 'fp-ts/lib/Semigroup.ts'
 
 const sum = S.fold(S.semigroupSum)(0)
 

@@ -1,12 +1,12 @@
-import * as assert from 'assert'
-import { eqNumber } from '../src/Eq'
-import { identity, pipe } from '../src/function'
-import * as M from '../src/Monoid'
-import * as O from '../src/Option'
-import * as Ord from '../src/Ord'
-import * as _ from '../src/ReadonlyNonEmptyArray'
-import * as S from '../src/Semigroup'
-import { showString } from '../src/Show'
+import * as assert from 'assert.ts'
+import { eqNumber } from '../src/Eq.ts'
+import { identity, pipe } from '../src/function.ts'
+import * as M from '../src/Monoid.ts'
+import * as O from '../src/Option.ts'
+import * as Ord from '../src/Ord.ts'
+import * as _ from '../src/ReadonlyNonEmptyArray.ts'
+import * as S from '../src/Semigroup.ts'
+import { showString } from '../src/Show.ts'
 
 describe('ReadonlyNonEmptyArray', () => {
   describe('pipeables', () => {

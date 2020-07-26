@@ -1,5 +1,5 @@
-import * as assert from 'assert'
-import * as _ from '../src/Tuple'
+import * as assert from 'assert.ts'
+import * as _ from '../src/Tuple.ts'
 
 describe('Tuple', () => {
   it('swap', () => {

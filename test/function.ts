@@ -1,4 +1,4 @@
-import * as assert from 'assert'
+import * as assert from 'assert.ts'
 import {
   constFalse,
   constNull,
@@ -16,7 +16,7 @@ import {
   tupled,
   untupled,
   pipe
-} from '../src/function'
+} from '../src/function.ts'
 
 const f = (n: number) => n + 1
 const g = (n: number) => n * 2

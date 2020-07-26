@@ -9,7 +9,7 @@
  *
  * @since 2.0.0
  */
-import { Semiring, getFunctionSemiring } from './Semiring'
+import { Semiring, getFunctionSemiring } from './Semiring.ts'
 
 /**
  * @category type classes
@@ -47,8 +47,8 @@ export function negate<A>(ring: Ring<A>): (a: A) => A {
  * Given a tuple of `Ring`s returns a `Ring` for the tuple
  *
  * @example
- * import { getTupleRing } from 'fp-ts/lib/Ring'
- * import { fieldNumber } from 'fp-ts/lib/Field'
+ * import { getTupleRing } from 'fp-ts/lib/Ring.ts'
+ * import { fieldNumber } from 'fp-ts/lib/Field.ts'
  *
  * const R = getTupleRing(fieldNumber, fieldNumber, fieldNumber)
  * assert.deepStrictEqual(R.add([1, 2, 3], [4, 5, 6]), [5, 7, 9])

@@ -1,7 +1,7 @@
-import * as assert from 'assert'
-import * as A from '../src/ReadonlyArray'
-import * as O from '../src/Option'
-import { getTraversableComposition } from '../src/Traversable'
+import * as assert from 'assert.ts'
+import * as A from '../src/ReadonlyArray.ts'
+import * as O from '../src/Option.ts'
+import { getTraversableComposition } from '../src/Traversable.ts'
 
 export const ArrayOptionURI = 'ArrayOption'
 

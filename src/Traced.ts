@@ -1,9 +1,9 @@
 /**
  * @since 2.0.0
  */
-import { Comonad2C } from './Comonad'
-import { Functor2 } from './Functor'
-import { Monoid } from './Monoid'
+import { Comonad2C } from './Comonad.ts'
+import { Functor2 } from './Functor.ts'
+import { Monoid } from './Monoid.ts'
 
 // -------------------------------------------------------------------------------------
 // model

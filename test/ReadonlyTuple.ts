@@ -1,10 +1,10 @@
-import * as assert from 'assert'
-import { getMonoid } from '../src/Array'
-import { left, right } from '../src/Either'
-import { identity, pipe } from '../src/function'
-import { monoidString } from '../src/Monoid'
-import * as O from '../src/Option'
-import * as _ from '../src/ReadonlyTuple'
+import * as assert from 'assert.ts'
+import { getMonoid } from '../src/Array.ts'
+import { left, right } from '../src/Either.ts'
+import { identity, pipe } from '../src/function.ts'
+import { monoidString } from '../src/Monoid.ts'
+import * as O from '../src/Option.ts'
+import * as _ from '../src/ReadonlyTuple.ts'
 
 describe('ReadonlyTuple', () => {
   describe('pipeables', () => {

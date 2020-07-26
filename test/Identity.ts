@@ -1,11 +1,11 @@
-import * as assert from 'assert'
-import { left, right } from '../src/Either'
-import { identity, pipe } from '../src/function'
-import * as _ from '../src/Identity'
-import { monoidString } from '../src/Monoid'
-import * as O from '../src/Option'
-import { eqNumber } from '../src/Eq'
-import { showString } from '../src/Show'
+import * as assert from 'assert.ts'
+import { left, right } from '../src/Either.ts'
+import { identity, pipe } from '../src/function.ts'
+import * as _ from '../src/Identity.ts'
+import { monoidString } from '../src/Monoid.ts'
+import * as O from '../src/Option.ts'
+import { eqNumber } from '../src/Eq.ts'
+import { showString } from '../src/Show.ts'
 
 describe('Identity', () => {
   describe('pipeables', () => {

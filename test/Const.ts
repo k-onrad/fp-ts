@@ -1,10 +1,10 @@
-import * as assert from 'assert'
-import * as _ from '../src/Const'
-import { semigroupString } from '../src/Semigroup'
-import { eqNumber } from '../src/Eq'
-import { monoidString } from '../src/Monoid'
-import { showString } from '../src/Show'
-import { pipe } from '../src/function'
+import * as assert from 'assert.ts'
+import * as _ from '../src/Const.ts'
+import { semigroupString } from '../src/Semigroup.ts'
+import { eqNumber } from '../src/Eq.ts'
+import { monoidString } from '../src/Monoid.ts'
+import { showString } from '../src/Show.ts'
+import { pipe } from '../src/function.ts'
 
 describe('Const', () => {
   describe('pipeables', () => {

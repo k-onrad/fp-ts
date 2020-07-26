@@ -1,4 +1,4 @@
-import * as _ from '../../src/Monoid'
+import * as _ from '../../src/Monoid.ts'
 
 //
 // getTupleMonoid

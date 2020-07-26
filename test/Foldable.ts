@@ -1,9 +1,9 @@
-import * as assert from 'assert'
-import * as A from '../src/ReadonlyArray'
-import { foldM, getFoldableComposition, intercalate, traverse_ } from '../src/Foldable'
-import * as I from '../src/IO'
-import { monoidString } from '../src/Monoid'
-import * as O from '../src/Option'
+import * as assert from 'assert.ts'
+import * as A from '../src/ReadonlyArray.ts'
+import { foldM, getFoldableComposition, intercalate, traverse_ } from '../src/Foldable.ts'
+import * as I from '../src/IO.ts'
+import { monoidString } from '../src/Monoid.ts'
+import * as O from '../src/Option.ts'
 
 export const ArrayOptionURI = 'ArrayOption'
 

@@ -107,15 +107,15 @@ See also [orElse](#orElse).
 export declare const alt: <E, A>(that: Lazy<TaskEither<E, A>>) => (fa: TaskEither<E, A>) => TaskEither<E, A>
 ```
 
-**Example**
+*Example**
 
-```ts
-import * as E from 'fp-ts/lib/Either'
-import { pipe } from 'fp-ts/lib/function'
-import * as TE from 'fp-ts/lib/TaskEither'
+``ts
+mport * as E from 'fp-ts/lib/Either.ts'
+mport { pipe } from 'fp-ts/lib/function.ts'
+mport * as TE from 'fp-ts/lib/TaskEither.ts'
 
-async function test() {
-  assert.deepStrictEqual(
+sync function test() {
+ assert.deepStrictEqual(
     await pipe(
       TE.right(1),
       TE.alt(() => TE.right(2))
@@ -420,15 +420,15 @@ See also [alt](#alt).
 export declare const orElse: <E, A, M>(onLeft: (e: E) => TaskEither<M, A>) => (ma: TaskEither<E, A>) => TaskEither<M, A>
 ```
 
-**Example**
+*Example**
 
-```ts
-import * as E from 'fp-ts/lib/Either'
-import { pipe } from 'fp-ts/lib/function'
-import * as TE from 'fp-ts/lib/TaskEither'
+``ts
+mport * as E from 'fp-ts/lib/Either.ts'
+mport { pipe } from 'fp-ts/lib/function.ts'
+mport * as TE from 'fp-ts/lib/TaskEither.ts'
 
-async function test() {
-  const errorHandler = TE.orElse((error: string) => TE.right(`recovering from ${error}...`))
+sync function test() {
+ const errorHandler = TE.orElse((error: string) => TE.right(`recovering from ${error}...`))
   assert.deepStrictEqual(await pipe(TE.right('ok'), errorHandler)(), E.right('ok'))
   assert.deepStrictEqual(await pipe(TE.left('ko'), errorHandler)(), E.right('recovering from ko...'))
 }
@@ -580,14 +580,14 @@ Note: `f` should never `throw` errors, they are not caught.
 export declare function tryCatch<E, A>(f: Lazy<Promise<A>>, onRejected: (reason: unknown) => E): TaskEither<E, A>
 ```
 
-**Example**
+*Example**
 
-```ts
-import { left, right } from 'fp-ts/lib/Either'
-import { tryCatch } from 'fp-ts/lib/TaskEither'
+``ts
+mport { left, right } from 'fp-ts/lib/Either.ts'
+mport { tryCatch } from 'fp-ts/lib/TaskEither.ts'
 
-tryCatch(() => Promise.resolve(1), String)().then((result) => {
-  assert.deepStrictEqual(result, right(1))
+ryCatch(() => Promise.resolve(1), String)().then((result) => {
+ assert.deepStrictEqual(result, right(1))
 })
 tryCatch(() => Promise.reject('error'), String)().then((result) => {
   assert.deepStrictEqual(result, left('error'))
@@ -885,14 +885,14 @@ export declare function taskify<A, B, C, D, E, L, R>(
 ): (a: A, b: B, c: C, d: D, e: E) => TaskEither<L, R>
 ```
 
-**Example**
+*Example**
 
-```ts
-import { taskify } from 'fp-ts/lib/TaskEither'
-import * as fs from 'fs'
+``ts
+mport { taskify } from 'fp-ts/lib/TaskEither.ts'
+mport * as fs from 'fs.ts'
 
-// const stat: (a: string | Buffer) => TaskEither<NodeJS.ErrnoException, fs.Stats>
-const stat = taskify(fs.stat)
+/ const stat: (a: string | Buffer) => TaskEither<NodeJS.ErrnoException, fs.Stats>
+onst stat = taskify(fs.stat)
 assert.strictEqual(stat.length, 0)
 ```
 

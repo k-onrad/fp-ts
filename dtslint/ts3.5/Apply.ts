@@ -1,7 +1,7 @@
-import * as _ from '../../src/Apply'
-import { URIS, Kind } from '../../src/HKT'
-import * as RTE from '../../src/ReaderTaskEither'
-import * as E from '../../src/Either'
+import * as _ from '../../src/Apply.ts'
+import { URIS, Kind } from '../../src/HKT.ts'
+import * as RTE from '../../src/ReaderTaskEither.ts'
+import * as E from '../../src/Either.ts'
 
 //
 // sequenceS

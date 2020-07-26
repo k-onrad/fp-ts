@@ -1,17 +1,17 @@
 /**
  * @since 2.4.0
  */
-import { apComposition, Apply1 } from './Apply'
-import { Bifunctor2 } from './Bifunctor'
-import { flow, pipe } from './function'
-import { Functor2 } from './Functor'
-import { IO } from './IO'
-import { IOEither } from './IOEither'
-import { Monad2C } from './Monad'
-import { MonadTask2C, MonadTask2 } from './MonadTask'
-import { Semigroup } from './Semigroup'
-import * as T from './Task'
-import * as TH from './These'
+import { apComposition, Apply1 } from './Apply.ts'
+import { Bifunctor2 } from './Bifunctor.ts'
+import { flow, pipe } from './function.ts'
+import { Functor2 } from './Functor.ts'
+import { IO } from './IO.ts'
+import { IOEither } from './IOEither.ts'
+import { Monad2C } from './Monad.ts'
+import { MonadTask2C, MonadTask2 } from './MonadTask.ts'
+import { Semigroup } from './Semigroup.ts'
+import * as T from './Task.ts'
+import * as TH from './These.ts'
 
 // -------------------------------------------------------------------------------------
 // model
@@ -19,8 +19,8 @@ import * as TH from './These'
 
 import These = TH.These
 import Task = T.Task
-import { Applicative2C, Applicative2 } from './Applicative'
-import { MonadIO2 } from './MonadIO'
+import { Applicative2C, Applicative2 } from './Applicative.ts'
+import { MonadIO2 } from './MonadIO.ts'
 
 /**
  * @category model

@@ -1,11 +1,11 @@
-import { createInterface } from 'readline'
-import { sequenceS } from '../src/Apply'
-import { log } from '../src/Console'
-import { flow } from '../src/function'
-import * as O from '../src/Option'
-import { pipe } from '../src/pipeable'
-import { randomInt } from '../src/Random'
-import * as T from '../src/Task'
+import { createInterface } from 'readline.ts'
+import { sequenceS } from '../src/Apply.ts'
+import { log } from '../src/Console.ts'
+import { flow } from '../src/function.ts'
+import * as O from '../src/Option.ts'
+import { pipe } from '../src/pipeable.ts'
+import { randomInt } from '../src/Random.ts'
+import * as T from '../src/Task.ts'
 
 //
 // helpers

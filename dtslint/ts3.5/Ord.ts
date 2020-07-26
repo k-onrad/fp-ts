@@ -1,4 +1,4 @@
-import * as _ from '../../src/Ord'
+import * as _ from '../../src/Ord.ts'
 
 //
 // getTupleOrd

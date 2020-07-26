@@ -1,7 +1,7 @@
-import * as Benchmark from 'benchmark'
-import * as O from '../src/Option'
-import { pipe } from '../src/pipeable'
-import { flow } from '../src/function'
+import * as Benchmark from 'benchmark.ts'
+import * as O from '../src/Option.ts'
+import { pipe } from '../src/pipeable.ts'
+import { flow } from '../src/function.ts'
 
 const suite = new Benchmark.Suite()
 

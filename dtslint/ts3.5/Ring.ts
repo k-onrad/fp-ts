@@ -1,5 +1,5 @@
-import * as _ from '../../src/Ring'
-import { fieldNumber } from '../../src/Field'
+import * as _ from '../../src/Ring.ts'
+import { fieldNumber } from '../../src/Field.ts'
 
 //
 // getTupleRing

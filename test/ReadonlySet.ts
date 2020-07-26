@@ -1,12 +1,12 @@
-import * as assert from 'assert'
-import { left, right } from '../src/Either'
-import { ordNumber } from '../src/Ord'
-import * as _ from '../src/ReadonlySet'
-import * as Eq from '../src/Eq'
-import { none, some as optionSome } from '../src/Option'
-import { showString } from '../src/Show'
-import { getMonoid } from '../src/Array'
-import { pipe } from '../src/function'
+import * as assert from 'assert.ts'
+import { left, right } from '../src/Either.ts'
+import { ordNumber } from '../src/Ord.ts'
+import * as _ from '../src/ReadonlySet.ts'
+import * as Eq from '../src/Eq.ts'
+import { none, some as optionSome } from '../src/Option.ts'
+import { showString } from '../src/Show.ts'
+import { getMonoid } from '../src/Array.ts'
+import { pipe } from '../src/function.ts'
 
 const gte2 = (n: number) => n >= 2
 

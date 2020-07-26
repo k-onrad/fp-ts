@@ -1,5 +1,5 @@
-import * as assert from 'assert'
-import * as _ from '../src/Date'
+import * as assert from 'assert.ts'
+import * as _ from '../src/Date.ts'
 
 describe('Date', () => {
   it('create', () => {

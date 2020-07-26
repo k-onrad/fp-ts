@@ -1,8 +1,8 @@
-import * as assert from 'assert'
-import * as A from '../src/ReadonlyArray'
-import { getFilterableComposition } from '../src/Filterable'
-import { some, none } from '../src/Option'
-import { right, left } from '../src/Either'
+import * as assert from 'assert.ts'
+import * as A from '../src/ReadonlyArray.ts'
+import { getFilterableComposition } from '../src/Filterable.ts'
+import { some, none } from '../src/Option.ts'
+import { right, left } from '../src/Either.ts'
 
 describe('Filterable', () => {
   it('getFilterableComposition', () => {

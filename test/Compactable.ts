@@ -1,8 +1,8 @@
-import * as assert from 'assert'
-import * as A from '../src/ReadonlyArray'
-import { getCompactableComposition } from '../src/Compactable'
-import { none, some } from '../src/Option'
-import { left, right } from '../src/Either'
+import * as assert from 'assert.ts'
+import * as A from '../src/ReadonlyArray.ts'
+import { getCompactableComposition } from '../src/Compactable.ts'
+import { none, some } from '../src/Option.ts'
+import { left, right } from '../src/Either.ts'
 
 describe('Compactable', () => {
   it('getCompactableComposition', () => {

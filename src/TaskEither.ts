@@ -4,24 +4,24 @@
  *
  * @since 2.0.0
  */
-import { Alt2, Alt2C } from './Alt'
-import { Applicative2, Applicative2C } from './Applicative'
-import { apComposition, Apply1 } from './Apply'
-import { Bifunctor2 } from './Bifunctor'
-import * as E from './Either'
-import { Filterable2C, getFilterableComposition } from './Filterable'
-import { flow, identity, Lazy, pipe, Predicate, Refinement } from './function'
-import { Functor2 } from './Functor'
-import { IO } from './IO'
-import { IOEither } from './IOEither'
-import { Monad2, Monad2C } from './Monad'
-import { MonadIO2 } from './MonadIO'
-import { MonadTask2, MonadTask2C } from './MonadTask'
-import { MonadThrow2, MonadThrow2C } from './MonadThrow'
-import { Monoid } from './Monoid'
-import { Option } from './Option'
-import { Semigroup } from './Semigroup'
-import * as T from './Task'
+import { Alt2, Alt2C } from './Alt.ts'
+import { Applicative2, Applicative2C } from './Applicative.ts'
+import { apComposition, Apply1 } from './Apply.ts'
+import { Bifunctor2 } from './Bifunctor.ts'
+import * as E from './Either.ts'
+import { Filterable2C, getFilterableComposition } from './Filterable.ts'
+import { flow, identity, Lazy, pipe, Predicate, Refinement } from './function.ts'
+import { Functor2 } from './Functor.ts'
+import { IO } from './IO.ts'
+import { IOEither } from './IOEither.ts'
+import { Monad2, Monad2C } from './Monad.ts'
+import { MonadIO2 } from './MonadIO.ts'
+import { MonadTask2, MonadTask2C } from './MonadTask.ts'
+import { MonadThrow2, MonadThrow2C } from './MonadThrow.ts'
+import { Monoid } from './Monoid.ts'
+import { Option } from './Option.ts'
+import { Semigroup } from './Semigroup.ts'
+import * as T from './Task.ts'
 
 // -------------------------------------------------------------------------------------
 // model
@@ -119,8 +119,8 @@ export const fromPredicate: {
  * Note: `f` should never `throw` errors, they are not caught.
  *
  * @example
- * import { left, right } from 'fp-ts/lib/Either'
- * import { tryCatch } from 'fp-ts/lib/TaskEither'
+ * import { left, right } from 'fp-ts/lib/Either.ts'
+ * import { tryCatch } from 'fp-ts/lib/TaskEither.ts'
  *
  * tryCatch(() => Promise.resolve(1), String)().then(result => {
  *   assert.deepStrictEqual(result, right(1))
@@ -176,9 +176,9 @@ export const getOrElse: <E, A>(onLeft: (e: E) => Task<A>) => (ma: TaskEither<E, 
  * See also [alt](#alt).
  *
  * @example
- * import * as E from 'fp-ts/lib/Either'
- * import { pipe } from 'fp-ts/lib/function'
- * import * as TE from 'fp-ts/lib/TaskEither'
+ * import * as E from 'fp-ts/lib/Either.ts'
+ * import { pipe } from 'fp-ts/lib/function.ts'
+ * import * as TE from 'fp-ts/lib/TaskEither.ts'
  *
  * async function test() {
  *   const errorHandler = TE.orElse((error: string) => TE.right(`recovering from ${error}...`))
@@ -417,9 +417,9 @@ export const flatten: <E, A>(mma: TaskEither<E, TaskEither<E, A>>) => TaskEither
  * See also [orElse](#orElse).
  *
  * @example
- * import * as E from 'fp-ts/lib/Either'
- * import { pipe } from 'fp-ts/lib/function'
- * import * as TE from 'fp-ts/lib/TaskEither'
+ * import * as E from 'fp-ts/lib/Either.ts'
+ * import { pipe } from 'fp-ts/lib/function.ts'
+ * import * as TE from 'fp-ts/lib/TaskEither.ts'
  *
  * async function test() {
  *   assert.deepStrictEqual(
@@ -731,8 +731,8 @@ export const taskEitherSeq: typeof taskEither = {
  * ```
  *
  * @example
- * import { taskify } from 'fp-ts/lib/TaskEither'
- * import * as fs from 'fs'
+ * import { taskify } from 'fp-ts/lib/TaskEither.ts'
+ * import * as fs from 'fs.ts'
  *
  * // const stat: (a: string | Buffer) => TaskEither<NodeJS.ErrnoException, fs.Stats>
  * const stat = taskify(fs.stat)

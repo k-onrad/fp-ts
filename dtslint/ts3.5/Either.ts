@@ -1,7 +1,7 @@
-import * as _ from '../../src/Either'
-import { pipe } from '../../src/pipeable'
-import { flow } from '../../src/function'
-import { monoidAll } from '../../src/Monoid'
+import * as _ from '../../src/Either.ts'
+import { pipe } from '../../src/pipeable.ts'
+import { flow } from '../../src/function.ts'
+import { monoidAll } from '../../src/Monoid.ts'
 
 //
 // getOrElseW

@@ -18,12 +18,12 @@ export type Identity<A> = A
 
 Let's see how to add an instance of the `Functor` type class for `Identity`
 
-```ts
-// Identity.ts
+``ts
+/ Identity.ts
 
-import { Functor1 } from 'fp-ts/lib/Functor'
+mport { Functor1 } from 'fp-ts/lib/Functor.ts'
 
-export const URI = 'Identity'
+xport const URI = 'Identity'
 
 export type URI = typeof URI
 
@@ -84,12 +84,12 @@ There's another triple for that: `URItoKind2`, `URIS2` and `Kind2`
 
 Example: `Either`
 
-```ts
-// Either.ts
+``ts
+/ Either.ts
 
-import { Functor2 } from 'fp-ts/lib/Functor'
+mport { Functor2 } from 'fp-ts/lib/Functor.ts'
 
-export const URI = 'Either'
+xport const URI = 'Either'
 
 export type URI = typeof URI
 
@@ -131,13 +131,13 @@ export interface Functor2<F extends URIS2> {
 
 ## How to type functions which abstracts over type classes
 
-Let's see how to type `lift`
+et's see how to type `lift`
 
-```ts
-import { HKT } from 'fp-ts/lib/HKT'
+``ts
+mport { HKT } from 'fp-ts/lib/HKT.ts'
 
-export function lift<F>(F: Functor<F>): <A, B>(f: (a: A) => B) => (fa: HKT<F, A>) => HKT<F, B> {
-  return f => fa => F.map(fa, f)
+xport function lift<F>(F: Functor<F>): <A, B>(f: (a: A) => B) => (fa: HKT<F, A>) => HKT<F, B> {
+ return f => fa => F.map(fa, f)
 }
 ```
 

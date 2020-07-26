@@ -1,7 +1,7 @@
-import * as assert from 'assert'
-import * as E from '../src/Either'
-import { getEitherM } from '../src/EitherT'
-import * as I from '../src/IO'
+import * as assert from 'assert.ts'
+import * as E from '../src/Either.ts'
+import { getEitherM } from '../src/EitherT.ts'
+import * as I from '../src/IO.ts'
 
 const T = getEitherM(I.Monad)
 

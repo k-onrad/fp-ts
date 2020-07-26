@@ -1,7 +1,7 @@
-import * as assert from 'assert'
-import { getStructMonoid, monoidAny, Monoid } from '../src/Monoid'
-import * as _ from '../src/Traced'
-import { pipe } from '../src/function'
+import * as assert from 'assert.ts'
+import { getStructMonoid, monoidAny, Monoid } from '../src/Monoid.ts'
+import * as _ from '../src/Traced.ts'
+import { pipe } from '../src/function.ts'
 
 // Adapted from https://chshersh.github.io/posts/2019-03-25-comonadic-builders
 

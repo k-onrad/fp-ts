@@ -1,6 +1,6 @@
-import * as _ from '../../src/Option'
-import { pipe } from '../../src/pipeable'
-import { flow } from '../../src/function'
+import * as _ from '../../src/Option.ts'
+import { pipe } from '../../src/pipeable.ts'
+import { flow } from '../../src/function.ts'
 
 //
 // getOrElseW

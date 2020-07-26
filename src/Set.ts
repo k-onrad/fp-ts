@@ -1,16 +1,16 @@
 /**
  * @since 2.0.0
  */
-import { Separated } from './Compactable'
-import { Either } from './Either'
-import { Eq } from './Eq'
-import { Predicate, Refinement } from './function'
-import { Monoid } from './Monoid'
-import { Option } from './Option'
-import { Ord } from './Ord'
-import * as RS from './ReadonlySet'
-import { Semigroup } from './Semigroup'
-import { Show } from './Show'
+import { Separated } from './Compactable.ts'
+import { Either } from './Either.ts'
+import { Eq } from './Eq.ts'
+import { Predicate, Refinement } from './function.ts'
+import { Monoid } from './Monoid.ts'
+import { Option } from './Option.ts'
+import { Ord } from './Ord.ts'
+import * as RS from './ReadonlySet.ts'
+import { Semigroup } from './Semigroup.ts'
+import { Show } from './Show.ts'
 
 /**
  * @category instances
@@ -147,9 +147,9 @@ export const partitionMap: <B, C>(
  * Form the set difference (`x` - `y`)
  *
  * @example
- * import { difference } from 'fp-ts/lib/Set'
- * import { eqNumber } from 'fp-ts/lib/Eq'
- * import { pipe } from 'fp-ts/lib/function'
+ * import { difference } from 'fp-ts/lib/Set.ts'
+ * import { eqNumber } from 'fp-ts/lib/Eq.ts'
+ * import { pipe } from 'fp-ts/lib/function.ts'
  *
  * assert.deepStrictEqual(pipe(new Set([1, 2]), difference(eqNumber)(new Set([1, 3]))), new Set([2]))
  *

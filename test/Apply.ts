@@ -1,9 +1,9 @@
-import * as assert from 'assert'
-import { sequenceS, sequenceT } from '../src/Apply'
-import * as A from '../src/ReadonlyArray'
-import * as E from '../src/Either'
-import * as O from '../src/Option'
-import { pipe } from '../src/function'
+import * as assert from 'assert.ts'
+import { sequenceS, sequenceT } from '../src/Apply.ts'
+import * as A from '../src/ReadonlyArray.ts'
+import * as E from '../src/Either.ts'
+import * as O from '../src/Option.ts'
+import { pipe } from '../src/function.ts'
 
 describe('Apply', () => {
   it('sequenceT', () => {

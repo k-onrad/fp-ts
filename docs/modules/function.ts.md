@@ -64,13 +64,13 @@ export interface FunctionN<A extends ReadonlyArray<unknown>, B> {
 }
 ```
 
-**Example**
+*Example**
 
-```ts
-import { FunctionN } from 'fp-ts/lib/function'
+``ts
+mport { FunctionN } from 'fp-ts/lib/function.ts'
 
-export const sum: FunctionN<[number, number], number> = (a, b) => a + b
-```
+xport const sum: FunctionN<[number, number], number> = (a, b) => a + b
+``
 
 Added in v2.0.0
 
@@ -286,13 +286,13 @@ export declare function flow<A extends ReadonlyArray<unknown>, B, C, D, E, F, G,
 ): (...a: A) => J
 ```
 
-**Example**
+*Example**
 
-```ts
-import { flow } from 'fp-ts/lib/function'
+``ts
+mport { flow } from 'fp-ts/lib/function.ts'
 
-const len = (s: string): number => s.length
-const double = (n: number): number => n * 2
+onst len = (s: string): number => s.length
+onst double = (n: number): number => n * 2
 
 const f = flow(len, double)
 
@@ -409,13 +409,13 @@ export declare function pipe<A, B, C, D, E, F, G, H, I, J>(
 ): J
 ```
 
-**Example**
+*Example**
 
-```ts
-import { pipe } from 'fp-ts/lib/function'
+``ts
+mport { pipe } from 'fp-ts/lib/function.ts'
 
-const len = (s: string): number => s.length
-const double = (n: number): number => n * 2
+onst len = (s: string): number => s.length
+onst double = (n: number): number => n * 2
 
 // without pipe
 assert.strictEqual(double(len('aaa')), 6)
@@ -446,12 +446,12 @@ Creates a tupled version of this function: instead of `n` arguments, it accepts 
 export declare function tupled<A extends ReadonlyArray<unknown>, B>(f: (...a: A) => B): (a: A) => B
 ```
 
-**Example**
+*Example**
 
-```ts
-import { tupled } from 'fp-ts/lib/function'
+``ts
+mport { tupled } from 'fp-ts/lib/function.ts'
 
-const add = tupled((x: number, y: number): number => x + y)
+onst add = tupled((x: number, y: number): number => x + y)
 
 assert.strictEqual(add([1, 2]), 3)
 ```

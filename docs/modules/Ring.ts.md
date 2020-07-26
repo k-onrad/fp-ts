@@ -54,14 +54,14 @@ export declare function getTupleRing<T extends ReadonlyArray<Ring<any>>>(
 ): Ring<{ [K in keyof T]: T[K] extends Ring<infer A> ? A : never }>
 ```
 
-**Example**
+*Example**
 
-```ts
-import { getTupleRing } from 'fp-ts/lib/Ring'
-import { fieldNumber } from 'fp-ts/lib/Field'
+``ts
+mport { getTupleRing } from 'fp-ts/lib/Ring.ts'
+mport { fieldNumber } from 'fp-ts/lib/Field.ts'
 
-const R = getTupleRing(fieldNumber, fieldNumber, fieldNumber)
-assert.deepStrictEqual(R.add([1, 2, 3], [4, 5, 6]), [5, 7, 9])
+onst R = getTupleRing(fieldNumber, fieldNumber, fieldNumber)
+ssert.deepStrictEqual(R.add([1, 2, 3], [4, 5, 6]), [5, 7, 9])
 assert.deepStrictEqual(R.mul([1, 2, 3], [4, 5, 6]), [4, 10, 18])
 assert.deepStrictEqual(R.one, [1, 1, 1])
 assert.deepStrictEqual(R.sub([1, 2, 3], [4, 5, 6]), [-3, -3, -3])

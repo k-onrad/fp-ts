@@ -26,8 +26,8 @@ do
 TypeScript
 
 ```ts
-import { pipe } from 'fp-ts/lib/pipeable'
-import * as T from 'fp-ts/lib/Task'
+import { pipe } from 'fp-ts/lib/pipeable.ts'
+import * as T from 'fp-ts/lib/Task.ts'
 
 declare function print(s: string): T.Task<void>
 declare const readLine: T.Task<string>
@@ -176,8 +176,8 @@ instance functorOption :: Functor Option where
 TypeScript
 
 ```ts
-import { Functor1 } from 'fp-ts/lib/Functor'
-import { pipe } from 'fp-ts/lib/pipeable'
+import { Functor1 } from 'fp-ts/lib/Functor.ts'
+import { pipe } from 'fp-ts/lib/pipeable.ts'
 
 const functorOption: Functor1<URI> = {
   URI,
@@ -209,8 +209,8 @@ instance monoidOption :: Semigroup a => Monoid (Option a) where
 TypeScript
 
 ```ts
-import { Semigroup } from 'fp-ts/lib/Semigroup'
-import { Monoid } from 'fp-ts/lib/Monoid'
+import { Semigroup } from 'fp-ts/lib/Semigroup.ts'
+import { Monoid } from 'fp-ts/lib/Monoid.ts'
 
 //                    ↓ the constraint is implemented as an additional parameter
 function getMonoid<A>(S: Semigroup<A>): Monoid<Option<A>> {
@@ -234,9 +234,9 @@ function getMonoid<A>(S: Semigroup<A>): Monoid<Option<A>> {
 A few options:
 
 ```ts
-import { sequenceS, sequenceT } from 'fp-ts/lib/Apply'
-import * as O from 'fp-ts/lib/Option'
-import { pipe } from 'fp-ts/lib/pipeable'
+import { sequenceS, sequenceT } from 'fp-ts/lib/Apply.ts'
+import * as O from 'fp-ts/lib/Option.ts'
+import { pipe } from 'fp-ts/lib/pipeable.ts'
 
 const fa = O.some(1)
 const fb = O.some('foo')

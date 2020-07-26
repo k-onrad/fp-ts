@@ -1,19 +1,19 @@
 /**
  * @since 2.0.0
  */
-import { Alt3, Alt3C } from './Alt'
-import { Applicative3, Applicative3C } from './Applicative'
-import { apComposition } from './Apply'
-import { Bifunctor3 } from './Bifunctor'
-import * as E from './Either'
-import { flow, identity, pipe, Predicate, Refinement } from './function'
-import { Functor3 } from './Functor'
-import { Monad3, Monad3C } from './Monad'
-import { MonadThrow3, MonadThrow3C } from './MonadThrow'
-import { Monoid } from './Monoid'
-import { Option } from './Option'
-import * as R from './Reader'
-import { Semigroup } from './Semigroup'
+import { Alt3, Alt3C } from './Alt.ts'
+import { Applicative3, Applicative3C } from './Applicative.ts'
+import { apComposition } from './Apply.ts'
+import { Bifunctor3 } from './Bifunctor.ts'
+import * as E from './Either.ts'
+import { flow, identity, pipe, Predicate, Refinement } from './function.ts'
+import { Functor3 } from './Functor.ts'
+import { Monad3, Monad3C } from './Monad.ts'
+import { MonadThrow3, MonadThrow3C } from './MonadThrow.ts'
+import { Monoid } from './Monoid.ts'
+import { Option } from './Option.ts'
+import * as R from './Reader.ts'
+import { Semigroup } from './Semigroup.ts'
 
 // -------------------------------------------------------------------------------------
 // model

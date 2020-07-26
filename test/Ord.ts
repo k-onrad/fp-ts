@@ -1,8 +1,8 @@
-import * as assert from 'assert'
-import { sort } from '../src/ReadonlyArray'
-import * as _ from '../src/Ord'
-import { fold } from '../src/Monoid'
-import { pipe } from '../src/function'
+import * as assert from 'assert.ts'
+import { sort } from '../src/ReadonlyArray.ts'
+import * as _ from '../src/Ord.ts'
+import { fold } from '../src/Monoid.ts'
+import { pipe } from '../src/function.ts'
 
 describe('Ord', () => {
   it('getTupleOrd', () => {

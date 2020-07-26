@@ -1,14 +1,14 @@
-import { log } from '../src/Console'
-import { Kind, URIS } from '../src/HKT'
-import * as O from '../src/Option'
-import { randomInt } from '../src/Random'
-import * as T from '../src/Task'
-import { createInterface } from 'readline'
-import { State, state } from '../src/State'
-import { Monad1 } from '../src/Monad'
-import { flow } from '../src/function'
-import { pipe, pipeable } from '../src/pipeable'
-import { sequenceS } from '../src/Apply'
+import { log } from '../src/Console.ts'
+import { Kind, URIS } from '../src/HKT.ts'
+import * as O from '../src/Option.ts'
+import { randomInt } from '../src/Random.ts'
+import * as T from '../src/Task.ts'
+import { createInterface } from 'readline.ts'
+import { State, state } from '../src/State.ts'
+import { Monad1 } from '../src/Monad.ts'
+import { flow } from '../src/function.ts'
+import { pipe, pipeable } from '../src/pipeable.ts'
+import { sequenceS } from '../src/Apply.ts'
 
 //
 // type classes
@@ -145,7 +145,7 @@ export const mainTask = main({
 // tests
 //
 
-import { dropLeft, snoc } from '../src/Array'
+import { dropLeft, snoc } from '../src/Array.ts'
 
 class TestData {
   constructor(readonly input: Array<string>, readonly output: Array<string>, readonly nums: Array<number>) {}
@@ -202,7 +202,7 @@ const mainTestTask = main({
 
 const testExample = new TestData(['Giulio', '1', 'n'], [], [1])
 
-import * as assert from 'assert'
+import * as assert from 'assert.ts'
 
 assert.deepStrictEqual(mainTestTask(testExample), [
   undefined,

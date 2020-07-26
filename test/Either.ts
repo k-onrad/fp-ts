@@ -1,13 +1,13 @@
-import * as assert from 'assert'
-import * as _ from '../src/Either'
-import { eqNumber, eqString } from '../src/Eq'
-import { identity, pipe } from '../src/function'
-import { monoidString, monoidSum } from '../src/Monoid'
-import * as O from '../src/Option'
-import { semigroupSum } from '../src/Semigroup'
-import { showString } from '../src/Show'
-import * as T from '../src/Task'
-import { sequenceT } from '../src/Apply'
+import * as assert from 'assert.ts'
+import * as _ from '../src/Either.ts'
+import { eqNumber, eqString } from '../src/Eq.ts'
+import { identity, pipe } from '../src/function.ts'
+import { monoidString, monoidSum } from '../src/Monoid.ts'
+import * as O from '../src/Option.ts'
+import { semigroupSum } from '../src/Semigroup.ts'
+import { showString } from '../src/Show.ts'
+import * as T from '../src/Task.ts'
+import { sequenceT } from '../src/Apply.ts'
 
 describe('Either', () => {
   describe('pipeables', () => {

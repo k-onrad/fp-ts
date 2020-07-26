@@ -1,7 +1,7 @@
-import * as assert from 'assert'
-import * as O from '../src/Option'
-import { getOptionM } from '../src/OptionT'
-import * as T from '../src/Task'
+import * as assert from 'assert.ts'
+import * as O from '../src/Option.ts'
+import { getOptionM } from '../src/OptionT.ts'
+import * as T from '../src/Task.ts'
 
 const MT = getOptionM(T.Monad)
 

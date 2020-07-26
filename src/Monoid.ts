@@ -1,9 +1,9 @@
 /**
  * @since 2.0.0
  */
-import { Bounded } from './Bounded'
-import { Endomorphism, identity } from './function'
-import { ReadonlyRecord } from './ReadonlyRecord'
+import { Bounded } from './Bounded.ts'
+import { Endomorphism, identity } from './function.ts'
+import { ReadonlyRecord } from './ReadonlyRecord.ts'
 import {
   fold as foldSemigroup,
   getDualSemigroup,
@@ -19,7 +19,7 @@ import {
   semigroupString,
   semigroupSum,
   semigroupVoid
-} from './Semigroup'
+} from './Semigroup.ts'
 
 /**
  * @category type classes
@@ -103,7 +103,7 @@ export function fold<A>(M: Monoid<A>): (as: ReadonlyArray<A>) => A {
  * Given a tuple of monoids returns a monoid for the tuple
  *
  * @example
- * import { getTupleMonoid, monoidString, monoidSum, monoidAll } from 'fp-ts/lib/Monoid'
+ * import { getTupleMonoid, monoidString, monoidSum, monoidAll } from 'fp-ts/lib/Monoid.ts'
  *
  * const M1 = getTupleMonoid(monoidString, monoidSum)
  * assert.deepStrictEqual(M1.concat(['a', 1], ['b', 2]), ['ab', 3])
@@ -127,7 +127,7 @@ export function getTupleMonoid<T extends ReadonlyArray<Monoid<any>>>(
  * The dual of a `Monoid`, obtained by swapping the arguments of `concat`.
  *
  * @example
- * import { getDualMonoid, monoidString } from 'fp-ts/lib/Monoid'
+ * import { getDualMonoid, monoidString } from 'fp-ts/lib/Monoid.ts'
  *
  * assert.deepStrictEqual(getDualMonoid(monoidString).concat('a', 'b'), 'ba')
  *

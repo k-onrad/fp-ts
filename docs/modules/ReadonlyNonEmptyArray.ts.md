@@ -349,14 +349,14 @@ export declare function group<A>(
 }
 ```
 
-**Example**
+*Example**
 
-```ts
-import { cons, group } from 'fp-ts/lib/ReadonlyNonEmptyArray'
-import { ordNumber } from 'fp-ts/lib/Ord'
+``ts
+mport { cons, group } from 'fp-ts/lib/ReadonlyNonEmptyArray.ts'
+mport { ordNumber } from 'fp-ts/lib/Ord.ts'
 
-assert.deepStrictEqual(group(ordNumber)([1, 2, 1, 1]), [cons(1, []), cons(2, []), cons(1, [1])])
-```
+ssert.deepStrictEqual(group(ordNumber)([1, 2, 1, 1]), [cons(1, []), cons(2, []), cons(1, [1])])
+``
 
 Added in v2.5.0
 
@@ -370,14 +370,14 @@ Sort and then group the elements of an array into non empty arrays.
 export declare function groupSort<A>(O: Ord<A>): (as: ReadonlyArray<A>) => ReadonlyArray<ReadonlyNonEmptyArray<A>>
 ```
 
-**Example**
+*Example**
 
-```ts
-import { cons, groupSort } from 'fp-ts/lib/ReadonlyNonEmptyArray'
-import { ordNumber } from 'fp-ts/lib/Ord'
+``ts
+mport { cons, groupSort } from 'fp-ts/lib/ReadonlyNonEmptyArray.ts'
+mport { ordNumber } from 'fp-ts/lib/Ord.ts'
 
-assert.deepStrictEqual(groupSort(ordNumber)([1, 2, 1, 1]), [cons(1, [1, 1]), cons(2, [])])
-```
+ssert.deepStrictEqual(groupSort(ordNumber)([1, 2, 1, 1]), [cons(1, [1, 1]), cons(2, [])])
+``
 
 Added in v2.5.0
 
@@ -451,13 +451,13 @@ Append an element to the front of an array, creating a new non empty array
 export declare const cons: <A>(head: A, tail: readonly A[]) => ReadonlyNonEmptyArray<A>
 ```
 
-**Example**
+*Example**
 
-```ts
-import { cons } from 'fp-ts/lib/ReadonlyNonEmptyArray'
+``ts
+mport { cons } from 'fp-ts/lib/ReadonlyNonEmptyArray.ts'
 
-assert.deepStrictEqual(cons(1, [2, 3, 4]), [1, 2, 3, 4])
-```
+ssert.deepStrictEqual(cons(1, [2, 3, 4]), [1, 2, 3, 4])
+``
 
 Added in v2.5.0
 
@@ -496,13 +496,13 @@ export declare function groupBy<A>(
 ): (as: ReadonlyArray<A>) => ReadonlyRecord<string, ReadonlyNonEmptyArray<A>>
 ```
 
-**Example**
+*Example**
 
-```ts
-import { cons, groupBy } from 'fp-ts/lib/ReadonlyNonEmptyArray'
+``ts
+mport { cons, groupBy } from 'fp-ts/lib/ReadonlyNonEmptyArray.ts'
 
-assert.deepStrictEqual(groupBy((s: string) => String(s.length))(['foo', 'bar', 'foobar']), {
-  '3': cons('foo', ['bar']),
+ssert.deepStrictEqual(groupBy((s: string) => String(s.length))(['foo', 'bar', 'foobar']), {
+ '3': cons('foo', ['bar']),
   '6': cons('foobar', []),
 })
 ```
@@ -519,13 +519,13 @@ Append an element to the end of an array, creating a new non empty array
 export declare const snoc: <A>(init: readonly A[], end: A) => ReadonlyNonEmptyArray<A>
 ```
 
-**Example**
+*Example**
 
-```ts
-import { snoc } from 'fp-ts/lib/ReadonlyNonEmptyArray'
+``ts
+mport { snoc } from 'fp-ts/lib/ReadonlyNonEmptyArray.ts'
 
-assert.deepStrictEqual(snoc([1, 2, 3], 4), [1, 2, 3, 4])
-```
+ssert.deepStrictEqual(snoc([1, 2, 3], 4), [1, 2, 3, 4])
+``
 
 Added in v2.5.0
 
@@ -659,14 +659,14 @@ Added in v2.5.0
 export declare const getEq: <A>(E: Eq<A>) => Eq<ReadonlyNonEmptyArray<A>>
 ```
 
-**Example**
+*Example**
 
-```ts
-import { getEq, cons } from 'fp-ts/lib/ReadonlyNonEmptyArray'
-import { eqNumber } from 'fp-ts/lib/Eq'
+``ts
+mport { getEq, cons } from 'fp-ts/lib/ReadonlyNonEmptyArray.ts'
+mport { eqNumber } from 'fp-ts/lib/Eq.ts'
 
-const E = getEq(eqNumber)
-assert.strictEqual(E.equals(cons(1, [2]), [1, 2]), true)
+onst E = getEq(eqNumber)
+ssert.strictEqual(E.equals(cons(1, [2]), [1, 2]), true)
 assert.strictEqual(E.equals(cons(1, [2]), [1, 3]), false)
 ```
 
@@ -792,13 +792,13 @@ Get all but the last element of a non empty array, creating a new array.
 export declare function init<A>(nea: ReadonlyNonEmptyArray<A>): ReadonlyArray<A>
 ```
 
-**Example**
+*Example**
 
-```ts
-import { init } from 'fp-ts/lib/ReadonlyNonEmptyArray'
+``ts
+mport { init } from 'fp-ts/lib/ReadonlyNonEmptyArray.ts'
 
-assert.deepStrictEqual(init([1, 2, 3]), [1, 2])
-assert.deepStrictEqual(init([1]), [])
+ssert.deepStrictEqual(init([1, 2, 3]), [1, 2])
+ssert.deepStrictEqual(init([1]), [])
 ```
 
 Added in v2.5.0

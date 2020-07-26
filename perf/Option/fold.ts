@@ -1,5 +1,5 @@
-import * as Benchmark from 'benchmark'
-import * as O from '../../src/Option'
+import * as Benchmark from 'benchmark.ts'
+import * as O from '../../src/Option.ts'
 
 const suite = new Benchmark.Suite()
 

@@ -2,7 +2,7 @@
  * @since 2.2.0
  */
 
-import { Lazy } from './function'
+import { Lazy } from './function.ts'
 
 /**
  * Defines the fold over a boolean value.
@@ -10,9 +10,9 @@ import { Lazy } from './function'
  * If `value` is false, `onFalse()` is returned, otherwise `onTrue()`.
  *
  * @example
- * import { some, map } from 'fp-ts/lib/Option'
- * import { pipe } from 'fp-ts/lib/function'
- * import { fold } from 'fp-ts/lib/boolean'
+ * import { some, map } from 'fp-ts/lib/Option.ts'
+ * import { pipe } from 'fp-ts/lib/function.ts'
+ * import { fold } from 'fp-ts/lib/boolean.ts'
  *
  * assert.deepStrictEqual(
  *  pipe(

@@ -1,12 +1,12 @@
-import * as assert from 'assert'
-import * as Apply from '../src/Apply'
-import * as E from '../src/Either'
-import { pipe } from '../src/function'
-import { monoidString } from '../src/Monoid'
-import { none, some } from '../src/Option'
-import * as R from '../src/Reader'
-import * as _ from '../src/ReaderEither'
-import { semigroupSum } from '../src/Semigroup'
+import * as assert from 'assert.ts'
+import * as Apply from '../src/Apply.ts'
+import * as E from '../src/Either.ts'
+import { pipe } from '../src/function.ts'
+import { monoidString } from '../src/Monoid.ts'
+import { none, some } from '../src/Option.ts'
+import * as R from '../src/Reader.ts'
+import * as _ from '../src/ReaderEither.ts'
+import { semigroupSum } from '../src/Semigroup.ts'
 
 describe('ReaderEither', () => {
   describe('pipeables', () => {
